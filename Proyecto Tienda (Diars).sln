@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto Tienda (Diars)", "Proyecto Tienda (Diars)\Proyecto Tienda (Diars).csproj", "{FE1DDF24-5A62-4F30-828C-2642E5B7FE50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_datos", "Capa_datos\Capa_datos.csproj", "{A3F4A8FC-98F4-4DFF-81CC-ABE4E0940FCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FE1DDF24-5A62-4F30-828C-2642E5B7FE50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE1DDF24-5A62-4F30-828C-2642E5B7FE50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE1DDF24-5A62-4F30-828C-2642E5B7FE50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F4A8FC-98F4-4DFF-81CC-ABE4E0940FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F4A8FC-98F4-4DFF-81CC-ABE4E0940FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F4A8FC-98F4-4DFF-81CC-ABE4E0940FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F4A8FC-98F4-4DFF-81CC-ABE4E0940FCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

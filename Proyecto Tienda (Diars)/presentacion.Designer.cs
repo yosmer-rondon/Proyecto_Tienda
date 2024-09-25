@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Tienda__Diars_
 {
-    partial class Form1
+    partial class presentacion
     {
         /// <summary>
         /// Variable del diseñador necesaria.
