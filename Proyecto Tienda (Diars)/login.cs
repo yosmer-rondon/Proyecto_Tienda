@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_Tienda__Diars_
 {
-    public partial class presentacion : Form
+    public partial class login : Form
     {
-        public presentacion()
+        public login()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            login lo = new login();
-            this.Hide();
-            lo.ShowDialog();
-            this.Show();
         }
     }
 }
