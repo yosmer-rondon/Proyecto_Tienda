@@ -26,5 +26,10 @@ namespace Proyecto_Tienda__Diars_
         {
 
         }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
