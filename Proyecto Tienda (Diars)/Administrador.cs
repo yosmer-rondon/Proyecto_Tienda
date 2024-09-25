@@ -16,5 +16,15 @@ namespace Proyecto_Tienda__Diars_
         {
             InitializeComponent();
         }
+
+        private void Administrador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

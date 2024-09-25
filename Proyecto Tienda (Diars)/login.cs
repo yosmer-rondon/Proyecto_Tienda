@@ -16,5 +16,13 @@ namespace Proyecto_Tienda__Diars_
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Administrador ad = new Administrador();
+            this.Hide();
+            ad.ShowDialog();
+            this.Show();
+        }
     }
 }
