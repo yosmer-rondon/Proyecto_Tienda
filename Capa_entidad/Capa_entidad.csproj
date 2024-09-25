@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A3F4A8FC-98F4-4DFF-81CC-ABE4E0940FCD}</ProjectGuid>
+    <ProjectGuid>{F23A7D72-5C11-446B-B878-CEDCF6AEFB95}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Capa_datos</RootNamespace>
-    <AssemblyName>Capa_datos</AssemblyName>
+    <RootNamespace>Capa_entidad</RootNamespace>
+    <AssemblyName>Capa_entidad</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,15 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
-    <Compile Include="datProducto.cs" />
+    <Compile Include="entProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Capa_entidad\Capa_entidad.csproj">
-      <Project>{f23a7d72-5c11-446b-b878-cedcf6aefb95}</Project>
-      <Name>Capa_entidad</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

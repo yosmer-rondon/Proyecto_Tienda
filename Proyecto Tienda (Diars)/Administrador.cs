@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,10 @@ namespace Proyecto_Tienda__Diars_
         {
             InitializeComponent();
         }
-
+        public void listar()
+        {
+            dgbproducto.DataSource = logProducto.Instancia.ListarHabitacion();
+        }
         private void Administrador_Load(object sender, EventArgs e)
         {
 
@@ -30,6 +34,11 @@ namespace Proyecto_Tienda__Diars_
         private void tabPage3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listar();
         }
     }
 }

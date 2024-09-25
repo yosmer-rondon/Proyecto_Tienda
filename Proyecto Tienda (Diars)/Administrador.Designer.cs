@@ -38,7 +38,7 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgbproducto = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@
             this.tabPage2.SuspendLayout();
             this.Productos.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbproducto)).BeginInit();
             this.SuspendLayout();
             // 
             // tapcontrol
@@ -137,7 +137,7 @@
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.dgbproducto);
             this.tabPage3.Location = new System.Drawing.Point(4, 36);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -196,14 +196,16 @@
             this.tabPage8.Text = "Categorias";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgbproducto
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 430);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1320, 309);
-            this.dataGridView1.TabIndex = 0;
+            this.dgbproducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgbproducto.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgbproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbproducto.Location = new System.Drawing.Point(6, 430);
+            this.dgbproducto.Name = "dgbproducto";
+            this.dgbproducto.ReadOnly = true;
+            this.dgbproducto.Size = new System.Drawing.Size(1320, 309);
+            this.dgbproducto.TabIndex = 0;
             // 
             // button1
             // 
@@ -222,6 +224,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Mostrar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -398,7 +401,7 @@
             this.Productos.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbproducto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -420,7 +423,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgbproducto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
