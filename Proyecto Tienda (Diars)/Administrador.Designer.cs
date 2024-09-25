@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.tapcontrol = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Cliente = new System.Windows.Forms.TabPage();
+            this.Producto = new System.Windows.Forms.TabPage();
             this.Productos = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -60,8 +60,9 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.Empleado = new System.Windows.Forms.TabPage();
             this.tapcontrol.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.Producto.SuspendLayout();
             this.Productos.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbproducto)).BeginInit();
@@ -69,8 +70,9 @@
             // 
             // tapcontrol
             // 
-            this.tapcontrol.Controls.Add(this.tabPage1);
-            this.tapcontrol.Controls.Add(this.tabPage2);
+            this.tapcontrol.Controls.Add(this.Cliente);
+            this.tapcontrol.Controls.Add(this.Producto);
+            this.tapcontrol.Controls.Add(this.Empleado);
             this.tapcontrol.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tapcontrol.Location = new System.Drawing.Point(12, 12);
             this.tapcontrol.Name = "tapcontrol";
@@ -78,26 +80,27 @@
             this.tapcontrol.Size = new System.Drawing.Size(1360, 837);
             this.tapcontrol.TabIndex = 0;
             // 
-            // tabPage1
+            // Cliente
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 36);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1352, 797);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Clientes";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Cliente.BackColor = System.Drawing.Color.SkyBlue;
+            this.Cliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Cliente.Location = new System.Drawing.Point(4, 36);
+            this.Cliente.Name = "Cliente";
+            this.Cliente.Padding = new System.Windows.Forms.Padding(3);
+            this.Cliente.Size = new System.Drawing.Size(1352, 797);
+            this.Cliente.TabIndex = 0;
+            this.Cliente.Text = "Clientes";
             // 
-            // tabPage2
+            // Producto
             // 
-            this.tabPage2.Controls.Add(this.Productos);
-            this.tabPage2.Location = new System.Drawing.Point(4, 36);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1352, 797);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Productos";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Producto.Controls.Add(this.Productos);
+            this.Producto.Location = new System.Drawing.Point(4, 36);
+            this.Producto.Name = "Producto";
+            this.Producto.Padding = new System.Windows.Forms.Padding(3);
+            this.Producto.Size = new System.Drawing.Size(1352, 797);
+            this.Producto.TabIndex = 1;
+            this.Producto.Text = "Productos";
+            this.Producto.UseVisualStyleBackColor = true;
             // 
             // Productos
             // 
@@ -386,10 +389,21 @@
             this.comboBox5.Size = new System.Drawing.Size(231, 35);
             this.comboBox5.TabIndex = 21;
             // 
+            // Empleado
+            // 
+            this.Empleado.BackColor = System.Drawing.Color.SkyBlue;
+            this.Empleado.Location = new System.Drawing.Point(4, 36);
+            this.Empleado.Name = "Empleado";
+            this.Empleado.Padding = new System.Windows.Forms.Padding(3);
+            this.Empleado.Size = new System.Drawing.Size(1352, 797);
+            this.Empleado.TabIndex = 2;
+            this.Empleado.Text = "Empleados";
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1384, 861);
             this.Controls.Add(this.tapcontrol);
             this.Name = "Administrador";
@@ -397,7 +411,7 @@
             this.Text = "Administrador";
             this.Load += new System.EventHandler(this.Administrador_Load);
             this.tapcontrol.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.Producto.ResumeLayout(false);
             this.Productos.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -409,8 +423,8 @@
         #endregion
 
         private System.Windows.Forms.TabControl tapcontrol;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage Cliente;
+        private System.Windows.Forms.TabPage Producto;
         private System.Windows.Forms.TabControl Productos;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
@@ -440,5 +454,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TabPage Empleado;
     }
 }

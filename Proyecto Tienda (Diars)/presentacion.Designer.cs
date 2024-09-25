@@ -37,7 +37,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 80.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Peru;
-            this.label1.Location = new System.Drawing.Point(378, 359);
+            this.label1.Location = new System.Drawing.Point(378, 339);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(628, 142);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Peru;
-            this.button1.Location = new System.Drawing.Point(573, 600);
+            this.button1.Location = new System.Drawing.Point(570, 573);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(239, 74);
             this.button1.TabIndex = 1;
