@@ -61,7 +61,7 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.Empleado = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Clientes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -112,7 +112,7 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbproducto)).BeginInit();
             this.Empleado.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.Clientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl2.SuspendLayout();
@@ -137,7 +137,7 @@
             // Cliente
             // 
             this.Cliente.BackColor = System.Drawing.Color.SkyBlue;
-            this.Cliente.Controls.Add(this.tabControl1);
+            this.Cliente.Controls.Add(this.Clientes);
             this.Cliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Cliente.Location = new System.Drawing.Point(4, 36);
             this.Cliente.Name = "Cliente";
@@ -455,15 +455,15 @@
             this.Empleado.TabIndex = 2;
             this.Empleado.Text = "Empleados";
             // 
-            // tabControl1
+            // Clientes
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1346, 788);
-            this.tabControl1.TabIndex = 0;
+            this.Clientes.Controls.Add(this.tabPage1);
+            this.Clientes.Controls.Add(this.tabPage2);
+            this.Clientes.Location = new System.Drawing.Point(3, 3);
+            this.Clientes.Name = "Clientes";
+            this.Clientes.SelectedIndex = 0;
+            this.Clientes.Size = new System.Drawing.Size(1346, 788);
+            this.Clientes.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -489,7 +489,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1338, 748);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Cliente";
             // 
             // tabPage2
             // 
@@ -897,7 +897,7 @@
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbproducto)).EndInit();
             this.Empleado.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.Clientes.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -944,7 +944,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabPage Empleado;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl Clientes;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
