@@ -22,9 +22,9 @@ namespace Capa_logica
                 return logProducto._instancia;
             }
         }
-        public List<entProducto> ListarHabitacion()
+        public List<entProducto> ListarProducto()
         {
-            return datProducto.Instancia.ListarHabitacion();
+            return datProducto.Instancia.ListarProducto();
         }
         #endregion singleton
     }

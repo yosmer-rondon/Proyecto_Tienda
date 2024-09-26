@@ -26,7 +26,7 @@ namespace Capa_datos
         }
         #endregion singleton
 
-        public List<entProducto> ListarHabitacion()
+        public List<entProducto> ListarProducto()
         {
             SqlCommand cmd = null;
             List<entProducto> lista = new List<entProducto>();

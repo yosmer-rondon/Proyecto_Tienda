@@ -19,7 +19,7 @@ namespace Proyecto_Tienda__Diars_
         }
         public void listar()
         {
-            dgbproducto.DataSource = logProducto.Instancia.ListarHabitacion();
+            dgbproducto.DataSource = logProducto.Instancia.ListarProducto();
         }
         private void Administrador_Load(object sender, EventArgs e)
         {

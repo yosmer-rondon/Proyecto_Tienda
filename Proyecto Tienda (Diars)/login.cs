@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +20,30 @@ namespace Proyecto_Tienda__Diars_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Administrador ad = new Administrador();
-            this.Hide();
-            ad.ShowDialog();
-            this.Show();
+            string dni = txtDNI.Text;
+            string contraseña = txtcontraseña.Text;
+
+            bool loginExitoso = logLogin.Instancia.VerificarLogin(dni, contraseña);
+
+            if (loginExitoso)
+            {
+                MessageBox.Show("Login exitoso");
+                // Redirigir al siguiente formulario o pantalla principal
+                Administrador ad = new Administrador();
+                this.Hide();
+                ad.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("DNI o contraseña incorrectos");
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
