@@ -98,14 +98,14 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.txtid_talla = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.txtnombretalla = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.btnmodificar = new System.Windows.Forms.Button();
-            this.btneliminartalla = new System.Windows.Forms.Button();
-            this.btnbuscar = new System.Windows.Forms.Button();
-            this.btnmostrar = new System.Windows.Forms.Button();
-            this.btnagregar = new System.Windows.Forms.Button();
-            this.dgvtalla = new System.Windows.Forms.DataGridView();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -120,7 +120,7 @@
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.txtnombrecategoria = new System.Windows.Forms.TextBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.button36 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
@@ -154,7 +154,6 @@
             this.Cargo = new System.Windows.Forms.TabPage();
             this.Pedidos = new System.Windows.Forms.TabPage();
             this.Ventas = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tapcontrol.SuspendLayout();
             this.Cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -167,7 +166,7 @@
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmarca)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvtalla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.tabPage8.SuspendLayout();
@@ -379,7 +378,6 @@
             this.Productos.Controls.Add(this.tabPage6);
             this.Productos.Controls.Add(this.tabPage7);
             this.Productos.Controls.Add(this.tabPage8);
-            this.Productos.Controls.Add(this.tabPage1);
             this.Productos.Location = new System.Drawing.Point(3, 3);
             this.Productos.Name = "Productos";
             this.Productos.SelectedIndex = 0;
@@ -872,14 +870,14 @@
             this.tabPage6.BackColor = System.Drawing.Color.SkyBlue;
             this.tabPage6.Controls.Add(this.txtid_talla);
             this.tabPage6.Controls.Add(this.label22);
-            this.tabPage6.Controls.Add(this.txtnombretalla);
+            this.tabPage6.Controls.Add(this.textBox20);
             this.tabPage6.Controls.Add(this.label24);
-            this.tabPage6.Controls.Add(this.btnmodificar);
-            this.tabPage6.Controls.Add(this.btneliminartalla);
-            this.tabPage6.Controls.Add(this.btnbuscar);
-            this.tabPage6.Controls.Add(this.btnmostrar);
-            this.tabPage6.Controls.Add(this.btnagregar);
-            this.tabPage6.Controls.Add(this.dgvtalla);
+            this.tabPage6.Controls.Add(this.button26);
+            this.tabPage6.Controls.Add(this.button27);
+            this.tabPage6.Controls.Add(this.button28);
+            this.tabPage6.Controls.Add(this.button29);
+            this.tabPage6.Controls.Add(this.button30);
+            this.tabPage6.Controls.Add(this.dataGridView5);
             this.tabPage6.Location = new System.Drawing.Point(4, 36);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -903,12 +901,12 @@
             this.label22.TabIndex = 61;
             this.label22.Text = "id talla";
             // 
-            // txtnombretalla
+            // textBox20
             // 
-            this.txtnombretalla.Location = new System.Drawing.Point(137, 85);
-            this.txtnombretalla.Name = "txtnombretalla";
-            this.txtnombretalla.Size = new System.Drawing.Size(255, 34);
-            this.txtnombretalla.TabIndex = 60;
+            this.textBox20.Location = new System.Drawing.Point(137, 85);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(255, 34);
+            this.textBox20.TabIndex = 60;
             // 
             // label24
             // 
@@ -919,70 +917,66 @@
             this.label24.TabIndex = 59;
             this.label24.Text = "Nombre";
             // 
-            // btnmodificar
+            // button26
             // 
-            this.btnmodificar.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnmodificar.Location = new System.Drawing.Point(506, 361);
-            this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(118, 45);
-            this.btnmodificar.TabIndex = 58;
-            this.btnmodificar.Text = "Modificartalla";
-            this.btnmodificar.UseVisualStyleBackColor = false;
-            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
+            this.button26.BackColor = System.Drawing.Color.PaleGreen;
+            this.button26.Location = new System.Drawing.Point(506, 361);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(118, 45);
+            this.button26.TabIndex = 58;
+            this.button26.Text = "Modificar";
+            this.button26.UseVisualStyleBackColor = false;
             // 
-            // btneliminartalla
+            // button27
             // 
-            this.btneliminartalla.BackColor = System.Drawing.Color.Orange;
-            this.btneliminartalla.Location = new System.Drawing.Point(385, 361);
-            this.btneliminartalla.Name = "btneliminartalla";
-            this.btneliminartalla.Size = new System.Drawing.Size(104, 45);
-            this.btneliminartalla.TabIndex = 57;
-            this.btneliminartalla.Text = "Eliminartalla";
-            this.btneliminartalla.UseVisualStyleBackColor = false;
-            this.btneliminartalla.Click += new System.EventHandler(this.btneliminar_Click);
+            this.button27.BackColor = System.Drawing.Color.Orange;
+            this.button27.Location = new System.Drawing.Point(385, 361);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(104, 45);
+            this.button27.TabIndex = 57;
+            this.button27.Text = "Eliminar";
+            this.button27.UseVisualStyleBackColor = false;
             // 
-            // btnbuscar
+            // button28
             // 
-            this.btnbuscar.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnbuscar.Location = new System.Drawing.Point(260, 361);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(104, 45);
-            this.btnbuscar.TabIndex = 56;
-            this.btnbuscar.Text = "Buscartalla";
-            this.btnbuscar.UseVisualStyleBackColor = false;
+            this.button28.BackColor = System.Drawing.Color.PaleGreen;
+            this.button28.Location = new System.Drawing.Point(260, 361);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(104, 45);
+            this.button28.TabIndex = 56;
+            this.button28.Text = "Buscar";
+            this.button28.UseVisualStyleBackColor = false;
             // 
-            // btnmostrar
+            // button29
             // 
-            this.btnmostrar.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnmostrar.Location = new System.Drawing.Point(137, 361);
-            this.btnmostrar.Name = "btnmostrar";
-            this.btnmostrar.Size = new System.Drawing.Size(104, 45);
-            this.btnmostrar.TabIndex = 55;
-            this.btnmostrar.Text = "Mostrartalla";
-            this.btnmostrar.UseVisualStyleBackColor = false;
-            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
+            this.button29.BackColor = System.Drawing.Color.PaleGreen;
+            this.button29.Location = new System.Drawing.Point(137, 361);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(104, 45);
+            this.button29.TabIndex = 55;
+            this.button29.Text = "Mostrar";
+            this.button29.UseVisualStyleBackColor = false;
             // 
-            // btnagregar
+            // button30
             // 
-            this.btnagregar.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnagregar.Location = new System.Drawing.Point(14, 361);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(104, 45);
-            this.btnagregar.TabIndex = 54;
-            this.btnagregar.Text = "Agregartalla";
-            this.btnagregar.UseVisualStyleBackColor = false;
-            this.btnagregar.Click += new System.EventHandler(this.button30_Click);
+            this.button30.BackColor = System.Drawing.Color.PaleGreen;
+            this.button30.Location = new System.Drawing.Point(14, 361);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(104, 45);
+            this.button30.TabIndex = 54;
+            this.button30.Text = "Agregar";
+            this.button30.UseVisualStyleBackColor = false;
             // 
-            // dgvtalla
+            // dataGridView5
             // 
-            this.dgvtalla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvtalla.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.dgvtalla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvtalla.Location = new System.Drawing.Point(7, 412);
-            this.dgvtalla.Name = "dgvtalla";
-            this.dgvtalla.ReadOnly = true;
-            this.dgvtalla.Size = new System.Drawing.Size(1320, 309);
-            this.dgvtalla.TabIndex = 53;
+            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(7, 412);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
+            this.dataGridView5.Size = new System.Drawing.Size(1320, 309);
+            this.dataGridView5.TabIndex = 53;
             // 
             // tabPage7
             // 
@@ -1102,7 +1096,7 @@
             this.tabPage8.BackColor = System.Drawing.Color.SkyBlue;
             this.tabPage8.Controls.Add(this.textBox23);
             this.tabPage8.Controls.Add(this.label29);
-            this.tabPage8.Controls.Add(this.txtnombrecategoria);
+            this.tabPage8.Controls.Add(this.textBox24);
             this.tabPage8.Controls.Add(this.label30);
             this.tabPage8.Controls.Add(this.button36);
             this.tabPage8.Controls.Add(this.button37);
@@ -1133,12 +1127,12 @@
             this.label29.TabIndex = 71;
             this.label29.Text = "id categoria";
             // 
-            // txtnombrecategoria
+            // textBox24
             // 
-            this.txtnombrecategoria.Location = new System.Drawing.Point(137, 85);
-            this.txtnombrecategoria.Name = "txtnombrecategoria";
-            this.txtnombrecategoria.Size = new System.Drawing.Size(255, 34);
-            this.txtnombrecategoria.TabIndex = 70;
+            this.textBox24.Location = new System.Drawing.Point(137, 85);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(255, 34);
+            this.textBox24.TabIndex = 70;
             // 
             // label30
             // 
@@ -1462,16 +1456,6 @@
             this.Ventas.Text = "Ventas";
             this.Ventas.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 36);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1335, 748);
-            this.tabPage1.TabIndex = 6;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1500,7 +1484,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvmarca)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvtalla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
@@ -1616,14 +1600,14 @@
         private System.Windows.Forms.DataGridView dgvmarca;
         private System.Windows.Forms.TextBox txtid_talla;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtnombretalla;
+        private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button btnmodificar;
-        private System.Windows.Forms.Button btneliminartalla;
-        private System.Windows.Forms.Button btnbuscar;
-        private System.Windows.Forms.Button btnmostrar;
-        private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.DataGridView dgvtalla;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txtnombrecolor;
@@ -1636,7 +1620,7 @@
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox txtnombrecategoria;
+        private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Button button37;
@@ -1644,6 +1628,5 @@
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
         private System.Windows.Forms.DataGridView dataGridView7;
-        private System.Windows.Forms.TabPage tabPage1;
     }
 }
