@@ -691,6 +691,7 @@
             this.button16.TabIndex = 27;
             this.button16.Text = "Modificar";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button17
             // 
@@ -701,6 +702,7 @@
             this.button17.TabIndex = 26;
             this.button17.Text = "Eliminar";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 
@@ -806,6 +808,7 @@
             this.button21.TabIndex = 46;
             this.button21.Text = "Modificar";
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 

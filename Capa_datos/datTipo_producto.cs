@@ -116,7 +116,7 @@ namespace Capa_datos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("Eliminartipoproducto", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ID", ttra.id_tìpo_producto);
+                cmd.Parameters.AddWithValue("@id_tipo_producto", ttra.id_tìpo_producto);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

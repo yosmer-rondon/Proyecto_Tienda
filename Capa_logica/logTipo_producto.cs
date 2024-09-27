@@ -30,6 +30,15 @@ namespace Capa_logica
         {
             datTipo_producto.Instancia.Insertartipoproducto(tip);
         }
+        public void EditarTipoproducto(entTipo_producto Cli)
+        {
+            datTipo_producto.Instancia.Editartipoproducto(Cli);
+        }
+        public void Eliminartipoproducto(entTipo_producto Cli)
+        {
+            datTipo_producto.Instancia.Eliminartipoproducto(Cli);
+        }
+
         #endregion singleton
     }
 }

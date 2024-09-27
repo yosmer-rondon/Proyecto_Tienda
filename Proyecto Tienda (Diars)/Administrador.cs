@@ -67,5 +67,45 @@ namespace Proyecto_Tienda__Diars_
             //LimpiarVariables();
             listartipoproducto();
         }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTipo_producto c = new entTipo_producto();
+                c.id_tìpo_producto = int.Parse(txtidtipoproducto.Text.Trim());
+                c.Nombre = txtnombretipoproducto.Text.Trim();
+                c.Descripcion = txtdescripciontipoproducto.Text.Trim();
+                logTipo_producto.Instancia.EditarTipoproducto(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listartipoproducto();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTipo_producto c = new entTipo_producto();
+
+                c.id_tìpo_producto = int.Parse(txtidtipoproducto.Text.Trim());
+                logTipo_producto.Instancia.Eliminartipoproducto(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listartipoproducto();
+        }
     }
 }
