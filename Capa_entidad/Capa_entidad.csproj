@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="entMarca.cs" />
     <Compile Include="entProducto.cs" />
-    <Compile Include="entTalla.cs" />
     <Compile Include="entTipo_producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

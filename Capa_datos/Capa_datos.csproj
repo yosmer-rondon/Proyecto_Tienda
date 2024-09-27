@@ -45,7 +45,6 @@
     <Compile Include="datLogin.cs" />
     <Compile Include="datMarca.cs" />
     <Compile Include="datProducto.cs" />
-    <Compile Include="datTalla.cs" />
     <Compile Include="datTipo_producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
