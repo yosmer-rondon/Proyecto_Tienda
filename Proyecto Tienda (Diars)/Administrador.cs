@@ -17,9 +17,13 @@ namespace Proyecto_Tienda__Diars_
         {
             InitializeComponent();
         }
-        public void listar()
+        public void listarproducto()
         {
-            dgbproducto.DataSource = logProducto.Instancia.ListarProducto();
+            dgvproducto.DataSource = logProducto.Instancia.ListarProducto();
+        }
+        public void listartipoproducto()
+        {
+            dgvtipoproducto.DataSource = logTipo_producto.Instancia.ListartipoProducto();
         }
         private void Administrador_Load(object sender, EventArgs e)
         {
@@ -38,7 +42,12 @@ namespace Proyecto_Tienda__Diars_
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listar();
+            listarproducto();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            listartipoproducto();
         }
     }
 }
