@@ -162,9 +162,5 @@ namespace Proyecto_Tienda__Diars_
             listarmarca();
         }
 
-        private void Cliente_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
