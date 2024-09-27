@@ -96,7 +96,7 @@
             this.btnagregarmarca = new System.Windows.Forms.Button();
             this.dgvmarca = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.txtid_talla = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -109,7 +109,7 @@
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.txtnombrecolor = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.button31 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
@@ -217,7 +217,7 @@
             this.Cliente.Size = new System.Drawing.Size(1352, 797);
             this.Cliente.TabIndex = 0;
             this.Cliente.Text = "Clientes";
-            this.Cliente.Click += new System.EventHandler(this.Cliente_Click);
+            //this.Cliente.Click += new System.EventHandler(this.Cliente_Click);
             // 
             // textBox8
             // 
@@ -868,7 +868,7 @@
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.SkyBlue;
-            this.tabPage6.Controls.Add(this.txtid_talla);
+            this.tabPage6.Controls.Add(this.textBox18);
             this.tabPage6.Controls.Add(this.label22);
             this.tabPage6.Controls.Add(this.textBox20);
             this.tabPage6.Controls.Add(this.label24);
@@ -885,21 +885,21 @@
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Talla";
             // 
-            // txtid_talla
+            // textBox18
             // 
-            this.txtid_talla.Location = new System.Drawing.Point(137, 28);
-            this.txtid_talla.Name = "txtid_talla";
-            this.txtid_talla.Size = new System.Drawing.Size(180, 34);
-            this.txtid_talla.TabIndex = 62;
+            this.textBox18.Location = new System.Drawing.Point(137, 28);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(180, 34);
+            this.textBox18.TabIndex = 62;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(26, 35);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(81, 27);
+            this.label22.Size = new System.Drawing.Size(99, 27);
             this.label22.TabIndex = 61;
-            this.label22.Text = "id talla";
+            this.label22.Text = "id marca";
             // 
             // textBox20
             // 
@@ -983,7 +983,7 @@
             this.tabPage7.BackColor = System.Drawing.Color.SkyBlue;
             this.tabPage7.Controls.Add(this.textBox21);
             this.tabPage7.Controls.Add(this.label25);
-            this.tabPage7.Controls.Add(this.txtnombrecolor);
+            this.tabPage7.Controls.Add(this.textBox22);
             this.tabPage7.Controls.Add(this.label28);
             this.tabPage7.Controls.Add(this.button31);
             this.tabPage7.Controls.Add(this.button32);
@@ -1014,12 +1014,12 @@
             this.label25.TabIndex = 71;
             this.label25.Text = "id color";
             // 
-            // txtnombrecolor
+            // textBox22
             // 
-            this.txtnombrecolor.Location = new System.Drawing.Point(137, 85);
-            this.txtnombrecolor.Name = "txtnombrecolor";
-            this.txtnombrecolor.Size = new System.Drawing.Size(255, 34);
-            this.txtnombrecolor.TabIndex = 70;
+            this.textBox22.Location = new System.Drawing.Point(137, 85);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(255, 34);
+            this.textBox22.TabIndex = 70;
             // 
             // label28
             // 
@@ -1598,7 +1598,7 @@
         private System.Windows.Forms.Button btnmostrarmarca;
         private System.Windows.Forms.Button btnagregarmarca;
         private System.Windows.Forms.DataGridView dgvmarca;
-        private System.Windows.Forms.TextBox txtid_talla;
+        private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label24;
@@ -1610,7 +1610,7 @@
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txtnombrecolor;
+        private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Button button32;
