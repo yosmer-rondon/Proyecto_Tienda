@@ -105,18 +105,18 @@
             this.button28 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dgvtalla = new System.Windows.Forms.DataGridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txtidcolor = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txtnombrecolor = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.modificarcolor = new System.Windows.Forms.Button();
+            this.eliminarcolor = new System.Windows.Forms.Button();
+            this.buscarcolor = new System.Windows.Forms.Button();
+            this.mostrarcolor = new System.Windows.Forms.Button();
+            this.agregarcolor = new System.Windows.Forms.Button();
+            this.dgvcolor = new System.Windows.Forms.DataGridView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -166,9 +166,9 @@
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmarca)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvtalla)).BeginInit();
             this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcolor)).BeginInit();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.Empleado.SuspendLayout();
@@ -217,7 +217,6 @@
             this.Cliente.Size = new System.Drawing.Size(1352, 797);
             this.Cliente.TabIndex = 0;
             this.Cliente.Text = "Clientes";
-
             // 
             // textBox8
             // 
@@ -877,7 +876,7 @@
             this.tabPage6.Controls.Add(this.button28);
             this.tabPage6.Controls.Add(this.button29);
             this.tabPage6.Controls.Add(this.button30);
-            this.tabPage6.Controls.Add(this.dataGridView5);
+            this.tabPage6.Controls.Add(this.dgvtalla);
             this.tabPage6.Location = new System.Drawing.Point(4, 36);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -926,6 +925,7 @@
             this.button26.TabIndex = 58;
             this.button26.Text = "Modificar";
             this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // button27
             // 
@@ -956,6 +956,7 @@
             this.button29.TabIndex = 55;
             this.button29.Text = "Mostrar";
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button30
             // 
@@ -966,31 +967,32 @@
             this.button30.TabIndex = 54;
             this.button30.Text = "Agregar";
             this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
-            // dataGridView5
+            // dgvtalla
             // 
-            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(7, 412);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.ReadOnly = true;
-            this.dataGridView5.Size = new System.Drawing.Size(1320, 309);
-            this.dataGridView5.TabIndex = 53;
+            this.dgvtalla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvtalla.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgvtalla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvtalla.Location = new System.Drawing.Point(7, 412);
+            this.dgvtalla.Name = "dgvtalla";
+            this.dgvtalla.ReadOnly = true;
+            this.dgvtalla.Size = new System.Drawing.Size(1320, 309);
+            this.dgvtalla.TabIndex = 53;
             // 
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.SkyBlue;
-            this.tabPage7.Controls.Add(this.textBox21);
+            this.tabPage7.Controls.Add(this.txtidcolor);
             this.tabPage7.Controls.Add(this.label25);
-            this.tabPage7.Controls.Add(this.textBox22);
+            this.tabPage7.Controls.Add(this.txtnombrecolor);
             this.tabPage7.Controls.Add(this.label28);
-            this.tabPage7.Controls.Add(this.button31);
-            this.tabPage7.Controls.Add(this.button32);
-            this.tabPage7.Controls.Add(this.button33);
-            this.tabPage7.Controls.Add(this.button34);
-            this.tabPage7.Controls.Add(this.button35);
-            this.tabPage7.Controls.Add(this.dataGridView6);
+            this.tabPage7.Controls.Add(this.modificarcolor);
+            this.tabPage7.Controls.Add(this.eliminarcolor);
+            this.tabPage7.Controls.Add(this.buscarcolor);
+            this.tabPage7.Controls.Add(this.mostrarcolor);
+            this.tabPage7.Controls.Add(this.agregarcolor);
+            this.tabPage7.Controls.Add(this.dgvcolor);
             this.tabPage7.Location = new System.Drawing.Point(4, 36);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -998,12 +1000,12 @@
             this.tabPage7.TabIndex = 4;
             this.tabPage7.Text = "Colores";
             // 
-            // textBox21
+            // txtidcolor
             // 
-            this.textBox21.Location = new System.Drawing.Point(137, 28);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(180, 34);
-            this.textBox21.TabIndex = 72;
+            this.txtidcolor.Location = new System.Drawing.Point(137, 28);
+            this.txtidcolor.Name = "txtidcolor";
+            this.txtidcolor.Size = new System.Drawing.Size(180, 34);
+            this.txtidcolor.TabIndex = 72;
             // 
             // label25
             // 
@@ -1014,12 +1016,12 @@
             this.label25.TabIndex = 71;
             this.label25.Text = "id color";
             // 
-            // textBox22
+            // txtnombrecolor
             // 
-            this.textBox22.Location = new System.Drawing.Point(137, 85);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(255, 34);
-            this.textBox22.TabIndex = 70;
+            this.txtnombrecolor.Location = new System.Drawing.Point(137, 85);
+            this.txtnombrecolor.Name = "txtnombrecolor";
+            this.txtnombrecolor.Size = new System.Drawing.Size(255, 34);
+            this.txtnombrecolor.TabIndex = 70;
             // 
             // label28
             // 
@@ -1030,66 +1032,70 @@
             this.label28.TabIndex = 69;
             this.label28.Text = "Nombre";
             // 
-            // button31
+            // modificarcolor
             // 
-            this.button31.BackColor = System.Drawing.Color.PaleGreen;
-            this.button31.Location = new System.Drawing.Point(506, 361);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(118, 45);
-            this.button31.TabIndex = 68;
-            this.button31.Text = "Modificar";
-            this.button31.UseVisualStyleBackColor = false;
+            this.modificarcolor.BackColor = System.Drawing.Color.PaleGreen;
+            this.modificarcolor.Location = new System.Drawing.Point(506, 361);
+            this.modificarcolor.Name = "modificarcolor";
+            this.modificarcolor.Size = new System.Drawing.Size(118, 45);
+            this.modificarcolor.TabIndex = 68;
+            this.modificarcolor.Text = "Modificar";
+            this.modificarcolor.UseVisualStyleBackColor = false;
+            this.modificarcolor.Click += new System.EventHandler(this.modificarcolor_Click);
             // 
-            // button32
+            // eliminarcolor
             // 
-            this.button32.BackColor = System.Drawing.Color.Orange;
-            this.button32.Location = new System.Drawing.Point(385, 361);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(104, 45);
-            this.button32.TabIndex = 67;
-            this.button32.Text = "Eliminar";
-            this.button32.UseVisualStyleBackColor = false;
+            this.eliminarcolor.BackColor = System.Drawing.Color.Orange;
+            this.eliminarcolor.Location = new System.Drawing.Point(385, 361);
+            this.eliminarcolor.Name = "eliminarcolor";
+            this.eliminarcolor.Size = new System.Drawing.Size(104, 45);
+            this.eliminarcolor.TabIndex = 67;
+            this.eliminarcolor.Text = "Eliminar";
+            this.eliminarcolor.UseVisualStyleBackColor = false;
+            this.eliminarcolor.Click += new System.EventHandler(this.eliminarcolor_Click);
             // 
-            // button33
+            // buscarcolor
             // 
-            this.button33.BackColor = System.Drawing.Color.PaleGreen;
-            this.button33.Location = new System.Drawing.Point(260, 361);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(104, 45);
-            this.button33.TabIndex = 66;
-            this.button33.Text = "Buscar";
-            this.button33.UseVisualStyleBackColor = false;
+            this.buscarcolor.BackColor = System.Drawing.Color.PaleGreen;
+            this.buscarcolor.Location = new System.Drawing.Point(260, 361);
+            this.buscarcolor.Name = "buscarcolor";
+            this.buscarcolor.Size = new System.Drawing.Size(104, 45);
+            this.buscarcolor.TabIndex = 66;
+            this.buscarcolor.Text = "Buscar";
+            this.buscarcolor.UseVisualStyleBackColor = false;
             // 
-            // button34
+            // mostrarcolor
             // 
-            this.button34.BackColor = System.Drawing.Color.PaleGreen;
-            this.button34.Location = new System.Drawing.Point(137, 361);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(104, 45);
-            this.button34.TabIndex = 65;
-            this.button34.Text = "Mostrar";
-            this.button34.UseVisualStyleBackColor = false;
+            this.mostrarcolor.BackColor = System.Drawing.Color.PaleGreen;
+            this.mostrarcolor.Location = new System.Drawing.Point(137, 361);
+            this.mostrarcolor.Name = "mostrarcolor";
+            this.mostrarcolor.Size = new System.Drawing.Size(104, 45);
+            this.mostrarcolor.TabIndex = 65;
+            this.mostrarcolor.Text = "Mostrar";
+            this.mostrarcolor.UseVisualStyleBackColor = false;
+            this.mostrarcolor.Click += new System.EventHandler(this.mostrarcolor_Click);
             // 
-            // button35
+            // agregarcolor
             // 
-            this.button35.BackColor = System.Drawing.Color.PaleGreen;
-            this.button35.Location = new System.Drawing.Point(14, 361);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(104, 45);
-            this.button35.TabIndex = 64;
-            this.button35.Text = "Agregar";
-            this.button35.UseVisualStyleBackColor = false;
+            this.agregarcolor.BackColor = System.Drawing.Color.PaleGreen;
+            this.agregarcolor.Location = new System.Drawing.Point(14, 361);
+            this.agregarcolor.Name = "agregarcolor";
+            this.agregarcolor.Size = new System.Drawing.Size(104, 45);
+            this.agregarcolor.TabIndex = 64;
+            this.agregarcolor.Text = "Agregar";
+            this.agregarcolor.UseVisualStyleBackColor = false;
+            this.agregarcolor.Click += new System.EventHandler(this.agregarcolor_Click);
             // 
-            // dataGridView6
+            // dgvcolor
             // 
-            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView6.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(7, 412);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.ReadOnly = true;
-            this.dataGridView6.Size = new System.Drawing.Size(1320, 309);
-            this.dataGridView6.TabIndex = 63;
+            this.dgvcolor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvcolor.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgvcolor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvcolor.Location = new System.Drawing.Point(7, 412);
+            this.dgvcolor.Name = "dgvcolor";
+            this.dgvcolor.ReadOnly = true;
+            this.dgvcolor.Size = new System.Drawing.Size(1320, 309);
+            this.dgvcolor.TabIndex = 63;
             // 
             // tabPage8
             // 
@@ -1484,10 +1490,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvmarca)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvtalla)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcolor)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
@@ -1607,17 +1613,17 @@
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.DataGridView dgvtalla;
+        private System.Windows.Forms.TextBox txtidcolor;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txtnombrecolor;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.Button modificarcolor;
+        private System.Windows.Forms.Button eliminarcolor;
+        private System.Windows.Forms.Button buscarcolor;
+        private System.Windows.Forms.Button mostrarcolor;
+        private System.Windows.Forms.Button agregarcolor;
+        private System.Windows.Forms.DataGridView dgvcolor;
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox textBox24;

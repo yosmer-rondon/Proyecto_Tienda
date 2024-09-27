@@ -30,6 +30,14 @@ namespace Proyecto_Tienda__Diars_
         {
             dgvmarca.DataSource = logMarca.Instancia.Listarmarca();
         }
+        public void listartalla()
+        {
+            dgvmarca.DataSource = logMarca.Instancia.Listarmarca();
+        }
+        public void listarcolor()
+        {
+            dgvcolor.DataSource = logColor.Instancia.Listarcolor();
+        }
         private void Administrador_Load(object sender, EventArgs e)
         {
 
@@ -162,5 +170,88 @@ namespace Proyecto_Tienda__Diars_
             listarmarca();
         }
 
+        private void agregarcolor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entColor mep = new entColor();
+                mep.Nombre = txtnombrecolor.Text.Trim();
+                logColor.Instancia.Insertarcolor(mep);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listarcolor();
+        }
+
+        private void mostrarcolor_Click(object sender, EventArgs e)
+        {
+            listarcolor();
+        }
+
+        private void eliminarcolor_Click(object sender, EventArgs e)
+        {
+            
+                try
+                {
+                    entColor c = new entColor();
+
+                    c.id_Color = int.Parse(txtidcolor.Text.Trim());
+                    logColor.Instancia.EliminarColor(c);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error.." + ex);
+                }
+                //LimpiarVariables();
+                listarcolor();
+            
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entMarca c = new entMarca();
+                c.id_Marca = int.Parse(txtid_Marca.Text.Trim());
+                c.Nombre = txtNombre_marca.Text.Trim();
+                logMarca.Instancia.Editarmarca(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listartalla();
+        }
+
+        private void modificarcolor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entColor c = new entColor();
+                c.id_Color = int.Parse(txtidcolor.Text.Trim());
+                c.Nombre = txtnombrecolor.Text.Trim();
+                logColor.Instancia.Editarcolor(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listarcolor();
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
