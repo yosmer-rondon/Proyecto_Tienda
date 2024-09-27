@@ -217,6 +217,7 @@
             this.Cliente.Size = new System.Drawing.Size(1352, 797);
             this.Cliente.TabIndex = 0;
             this.Cliente.Text = "Clientes";
+            this.Cliente.Click += new System.EventHandler(this.Cliente_Click);
             // 
             // textBox8
             // 

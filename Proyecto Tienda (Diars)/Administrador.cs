@@ -161,5 +161,10 @@ namespace Proyecto_Tienda__Diars_
             //LimpiarVariables();
             listarmarca();
         }
+
+        private void Cliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
