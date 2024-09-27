@@ -38,6 +38,10 @@ namespace Proyecto_Tienda__Diars_
         {
             dgvcolor.DataSource = logColor.Instancia.Listarcolor();
         }
+        public void listarcategoria()
+        {
+            dgvcategoria.DataSource = logCategoria.Instancia.Listarcategoria();
+        }
         private void Administrador_Load(object sender, EventArgs e)
         {
 
@@ -280,6 +284,61 @@ namespace Proyecto_Tienda__Diars_
             }
             //LimpiarVariables();
             listartalla();
+        }
+
+        private void mostrarcategoria_Click(object sender, EventArgs e)
+        {
+            listarcategoria();
+        }
+
+        private void agregarcategoria_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCategoria mep = new entCategoria();
+                mep.Nombre = txtnombrecategoria.Text.Trim();
+                logCategoria.Instancia.Insertarcategoria(mep);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listarcategoria();
+        }
+
+        private void eliminarcategoria_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCategoria c = new entCategoria();
+
+                c.id_Categoria = int.Parse(txtidcategoria.Text.Trim());
+                logCategoria.Instancia.Eliminarcategoria(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listarcategoria();
+        }
+
+        private void modificarcategoria_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCategoria c = new entCategoria();
+                c.id_Categoria = int.Parse(txtidcategoria.Text.Trim());
+                c.Nombre = txtnombrecategoria.Text.Trim();
+                logCategoria.Instancia.Editarcategoria(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listarcolor();
         }
     }
 }

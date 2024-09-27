@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entCategoria.cs" />
     <Compile Include="entColor.cs" />
     <Compile Include="entMarca.cs" />
     <Compile Include="entProducto.cs" />

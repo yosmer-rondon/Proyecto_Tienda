@@ -11,10 +11,7 @@ namespace Capa_logica
     public class logColor
     {
         #region sigleton
-        //Patron Singleton
-        // Variable estática para la instancia
         private static readonly logColor _instancia = new logColor();
-        //privado para evitar la instanciación directa
         public static logColor Instancia
         {
             get

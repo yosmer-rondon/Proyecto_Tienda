@@ -118,16 +118,16 @@
             this.agregarcolor = new System.Windows.Forms.Button();
             this.dgvcolor = new System.Windows.Forms.DataGridView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.txtidcategoria = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtnombrecategoria = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.modificarcategoria = new System.Windows.Forms.Button();
+            this.eliminarcategoria = new System.Windows.Forms.Button();
+            this.buscarcategoria = new System.Windows.Forms.Button();
+            this.mostrarcategoria = new System.Windows.Forms.Button();
+            this.agregarcategoria = new System.Windows.Forms.Button();
+            this.dgvcategoria = new System.Windows.Forms.DataGridView();
             this.Empleado = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.Empleados = new System.Windows.Forms.TabPage();
@@ -170,7 +170,7 @@
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcolor)).BeginInit();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcategoria)).BeginInit();
             this.Empleado.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.Empleados.SuspendLayout();
@@ -1101,16 +1101,16 @@
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.SkyBlue;
-            this.tabPage8.Controls.Add(this.textBox23);
+            this.tabPage8.Controls.Add(this.txtidcategoria);
             this.tabPage8.Controls.Add(this.label29);
-            this.tabPage8.Controls.Add(this.textBox24);
+            this.tabPage8.Controls.Add(this.txtnombrecategoria);
             this.tabPage8.Controls.Add(this.label30);
-            this.tabPage8.Controls.Add(this.button36);
-            this.tabPage8.Controls.Add(this.button37);
-            this.tabPage8.Controls.Add(this.button38);
-            this.tabPage8.Controls.Add(this.button39);
-            this.tabPage8.Controls.Add(this.button40);
-            this.tabPage8.Controls.Add(this.dataGridView7);
+            this.tabPage8.Controls.Add(this.modificarcategoria);
+            this.tabPage8.Controls.Add(this.eliminarcategoria);
+            this.tabPage8.Controls.Add(this.buscarcategoria);
+            this.tabPage8.Controls.Add(this.mostrarcategoria);
+            this.tabPage8.Controls.Add(this.agregarcategoria);
+            this.tabPage8.Controls.Add(this.dgvcategoria);
             this.tabPage8.Location = new System.Drawing.Point(4, 36);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
@@ -1118,12 +1118,12 @@
             this.tabPage8.TabIndex = 5;
             this.tabPage8.Text = "Categorias";
             // 
-            // textBox23
+            // txtidcategoria
             // 
-            this.textBox23.Location = new System.Drawing.Point(163, 28);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(180, 34);
-            this.textBox23.TabIndex = 72;
+            this.txtidcategoria.Location = new System.Drawing.Point(163, 28);
+            this.txtidcategoria.Name = "txtidcategoria";
+            this.txtidcategoria.Size = new System.Drawing.Size(180, 34);
+            this.txtidcategoria.TabIndex = 72;
             // 
             // label29
             // 
@@ -1134,12 +1134,12 @@
             this.label29.TabIndex = 71;
             this.label29.Text = "id categoria";
             // 
-            // textBox24
+            // txtnombrecategoria
             // 
-            this.textBox24.Location = new System.Drawing.Point(137, 85);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(255, 34);
-            this.textBox24.TabIndex = 70;
+            this.txtnombrecategoria.Location = new System.Drawing.Point(137, 85);
+            this.txtnombrecategoria.Name = "txtnombrecategoria";
+            this.txtnombrecategoria.Size = new System.Drawing.Size(255, 34);
+            this.txtnombrecategoria.TabIndex = 70;
             // 
             // label30
             // 
@@ -1150,66 +1150,70 @@
             this.label30.TabIndex = 69;
             this.label30.Text = "Nombre";
             // 
-            // button36
+            // modificarcategoria
             // 
-            this.button36.BackColor = System.Drawing.Color.PaleGreen;
-            this.button36.Location = new System.Drawing.Point(506, 361);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(118, 45);
-            this.button36.TabIndex = 68;
-            this.button36.Text = "Modificar";
-            this.button36.UseVisualStyleBackColor = false;
+            this.modificarcategoria.BackColor = System.Drawing.Color.PaleGreen;
+            this.modificarcategoria.Location = new System.Drawing.Point(506, 361);
+            this.modificarcategoria.Name = "modificarcategoria";
+            this.modificarcategoria.Size = new System.Drawing.Size(118, 45);
+            this.modificarcategoria.TabIndex = 68;
+            this.modificarcategoria.Text = "Modificar";
+            this.modificarcategoria.UseVisualStyleBackColor = false;
+            this.modificarcategoria.Click += new System.EventHandler(this.modificarcategoria_Click);
             // 
-            // button37
+            // eliminarcategoria
             // 
-            this.button37.BackColor = System.Drawing.Color.Orange;
-            this.button37.Location = new System.Drawing.Point(385, 361);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(104, 45);
-            this.button37.TabIndex = 67;
-            this.button37.Text = "Eliminar";
-            this.button37.UseVisualStyleBackColor = false;
+            this.eliminarcategoria.BackColor = System.Drawing.Color.Orange;
+            this.eliminarcategoria.Location = new System.Drawing.Point(385, 361);
+            this.eliminarcategoria.Name = "eliminarcategoria";
+            this.eliminarcategoria.Size = new System.Drawing.Size(104, 45);
+            this.eliminarcategoria.TabIndex = 67;
+            this.eliminarcategoria.Text = "Eliminar";
+            this.eliminarcategoria.UseVisualStyleBackColor = false;
+            this.eliminarcategoria.Click += new System.EventHandler(this.eliminarcategoria_Click);
             // 
-            // button38
+            // buscarcategoria
             // 
-            this.button38.BackColor = System.Drawing.Color.PaleGreen;
-            this.button38.Location = new System.Drawing.Point(260, 361);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(104, 45);
-            this.button38.TabIndex = 66;
-            this.button38.Text = "Buscar";
-            this.button38.UseVisualStyleBackColor = false;
+            this.buscarcategoria.BackColor = System.Drawing.Color.PaleGreen;
+            this.buscarcategoria.Location = new System.Drawing.Point(260, 361);
+            this.buscarcategoria.Name = "buscarcategoria";
+            this.buscarcategoria.Size = new System.Drawing.Size(104, 45);
+            this.buscarcategoria.TabIndex = 66;
+            this.buscarcategoria.Text = "Buscar";
+            this.buscarcategoria.UseVisualStyleBackColor = false;
             // 
-            // button39
+            // mostrarcategoria
             // 
-            this.button39.BackColor = System.Drawing.Color.PaleGreen;
-            this.button39.Location = new System.Drawing.Point(137, 361);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(104, 45);
-            this.button39.TabIndex = 65;
-            this.button39.Text = "Mostrar";
-            this.button39.UseVisualStyleBackColor = false;
+            this.mostrarcategoria.BackColor = System.Drawing.Color.PaleGreen;
+            this.mostrarcategoria.Location = new System.Drawing.Point(137, 361);
+            this.mostrarcategoria.Name = "mostrarcategoria";
+            this.mostrarcategoria.Size = new System.Drawing.Size(104, 45);
+            this.mostrarcategoria.TabIndex = 65;
+            this.mostrarcategoria.Text = "Mostrar";
+            this.mostrarcategoria.UseVisualStyleBackColor = false;
+            this.mostrarcategoria.Click += new System.EventHandler(this.mostrarcategoria_Click);
             // 
-            // button40
+            // agregarcategoria
             // 
-            this.button40.BackColor = System.Drawing.Color.PaleGreen;
-            this.button40.Location = new System.Drawing.Point(14, 361);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(104, 45);
-            this.button40.TabIndex = 64;
-            this.button40.Text = "Agregar";
-            this.button40.UseVisualStyleBackColor = false;
+            this.agregarcategoria.BackColor = System.Drawing.Color.PaleGreen;
+            this.agregarcategoria.Location = new System.Drawing.Point(14, 361);
+            this.agregarcategoria.Name = "agregarcategoria";
+            this.agregarcategoria.Size = new System.Drawing.Size(104, 45);
+            this.agregarcategoria.TabIndex = 64;
+            this.agregarcategoria.Text = "Agregar";
+            this.agregarcategoria.UseVisualStyleBackColor = false;
+            this.agregarcategoria.Click += new System.EventHandler(this.agregarcategoria_Click);
             // 
-            // dataGridView7
+            // dgvcategoria
             // 
-            this.dataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView7.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(7, 412);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.ReadOnly = true;
-            this.dataGridView7.Size = new System.Drawing.Size(1320, 309);
-            this.dataGridView7.TabIndex = 63;
+            this.dgvcategoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvcategoria.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgvcategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvcategoria.Location = new System.Drawing.Point(7, 412);
+            this.dgvcategoria.Name = "dgvcategoria";
+            this.dgvcategoria.ReadOnly = true;
+            this.dgvcategoria.Size = new System.Drawing.Size(1320, 309);
+            this.dgvcategoria.TabIndex = 63;
             // 
             // Empleado
             // 
@@ -1497,7 +1501,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvcolor)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcategoria)).EndInit();
             this.Empleado.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.Empleados.ResumeLayout(false);
@@ -1625,15 +1629,15 @@
         private System.Windows.Forms.Button mostrarcolor;
         private System.Windows.Forms.Button agregarcolor;
         private System.Windows.Forms.DataGridView dgvcolor;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox txtidcategoria;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txtnombrecategoria;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.Button modificarcategoria;
+        private System.Windows.Forms.Button eliminarcategoria;
+        private System.Windows.Forms.Button buscarcategoria;
+        private System.Windows.Forms.Button mostrarcategoria;
+        private System.Windows.Forms.Button agregarcategoria;
+        private System.Windows.Forms.DataGridView dgvcategoria;
     }
 }
