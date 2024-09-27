@@ -81,5 +81,55 @@ namespace Capa_datos
             finally { cmd.Connection.Close(); }
             return inserta;
         }
+        public Boolean Editartipoproducto(entTipo_producto etp)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("Editartipoproducto", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_tipo_producto", etp.id_tìpo_producto);
+                cmd.Parameters.AddWithValue("@Nombre", etp.Nombre);
+                cmd.Parameters.AddWithValue("@descripcion", etp.Descripcion);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return edita;
+        }
+        public Boolean Eliminartipoproducto(entTipo_producto ttra)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("Eliminartipoproducto", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID", ttra.id_tìpo_producto);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
+        }
     }
 }
