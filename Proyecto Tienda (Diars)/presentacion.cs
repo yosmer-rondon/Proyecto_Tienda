@@ -24,5 +24,13 @@ namespace Proyecto_Tienda__Diars_
             lo.ShowDialog();
             this.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Empleado lo = new Empleado();
+            this.Hide();
+            lo.ShowDialog();
+            this.Show();
+        }
     }
 }

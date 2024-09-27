@@ -96,15 +96,15 @@
             this.btnagregarmarca = new System.Windows.Forms.Button();
             this.dgvmarca = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtidtalla = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txtnombretalla = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
+            this.modificartalla = new System.Windows.Forms.Button();
+            this.eliminartalla = new System.Windows.Forms.Button();
+            this.buscartalla = new System.Windows.Forms.Button();
+            this.mostrartalla = new System.Windows.Forms.Button();
+            this.agregartalla = new System.Windows.Forms.Button();
             this.dgvtalla = new System.Windows.Forms.DataGridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.txtidcolor = new System.Windows.Forms.TextBox();
@@ -867,15 +867,15 @@
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.SkyBlue;
-            this.tabPage6.Controls.Add(this.textBox18);
+            this.tabPage6.Controls.Add(this.txtidtalla);
             this.tabPage6.Controls.Add(this.label22);
-            this.tabPage6.Controls.Add(this.textBox20);
+            this.tabPage6.Controls.Add(this.txtnombretalla);
             this.tabPage6.Controls.Add(this.label24);
-            this.tabPage6.Controls.Add(this.button26);
-            this.tabPage6.Controls.Add(this.button27);
-            this.tabPage6.Controls.Add(this.button28);
-            this.tabPage6.Controls.Add(this.button29);
-            this.tabPage6.Controls.Add(this.button30);
+            this.tabPage6.Controls.Add(this.modificartalla);
+            this.tabPage6.Controls.Add(this.eliminartalla);
+            this.tabPage6.Controls.Add(this.buscartalla);
+            this.tabPage6.Controls.Add(this.mostrartalla);
+            this.tabPage6.Controls.Add(this.agregartalla);
             this.tabPage6.Controls.Add(this.dgvtalla);
             this.tabPage6.Location = new System.Drawing.Point(4, 36);
             this.tabPage6.Name = "tabPage6";
@@ -884,12 +884,12 @@
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Talla";
             // 
-            // textBox18
+            // txtidtalla
             // 
-            this.textBox18.Location = new System.Drawing.Point(137, 28);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(180, 34);
-            this.textBox18.TabIndex = 62;
+            this.txtidtalla.Location = new System.Drawing.Point(137, 28);
+            this.txtidtalla.Name = "txtidtalla";
+            this.txtidtalla.Size = new System.Drawing.Size(180, 34);
+            this.txtidtalla.TabIndex = 62;
             // 
             // label22
             // 
@@ -900,74 +900,75 @@
             this.label22.TabIndex = 61;
             this.label22.Text = "id marca";
             // 
-            // textBox20
+            // txtnombretalla
             // 
-            this.textBox20.Location = new System.Drawing.Point(137, 85);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(255, 34);
-            this.textBox20.TabIndex = 60;
+            this.txtnombretalla.Location = new System.Drawing.Point(137, 85);
+            this.txtnombretalla.Name = "txtnombretalla";
+            this.txtnombretalla.Size = new System.Drawing.Size(255, 34);
+            this.txtnombretalla.TabIndex = 60;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(30, 92);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(95, 27);
+            this.label24.Size = new System.Drawing.Size(61, 27);
             this.label24.TabIndex = 59;
-            this.label24.Text = "Nombre";
+            this.label24.Text = "Talla";
             // 
-            // button26
+            // modificartalla
             // 
-            this.button26.BackColor = System.Drawing.Color.PaleGreen;
-            this.button26.Location = new System.Drawing.Point(506, 361);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(118, 45);
-            this.button26.TabIndex = 58;
-            this.button26.Text = "Modificar";
-            this.button26.UseVisualStyleBackColor = false;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
+            this.modificartalla.BackColor = System.Drawing.Color.PaleGreen;
+            this.modificartalla.Location = new System.Drawing.Point(506, 361);
+            this.modificartalla.Name = "modificartalla";
+            this.modificartalla.Size = new System.Drawing.Size(118, 45);
+            this.modificartalla.TabIndex = 58;
+            this.modificartalla.Text = "Modificar";
+            this.modificartalla.UseVisualStyleBackColor = false;
+            this.modificartalla.Click += new System.EventHandler(this.button26_Click);
             // 
-            // button27
+            // eliminartalla
             // 
-            this.button27.BackColor = System.Drawing.Color.Orange;
-            this.button27.Location = new System.Drawing.Point(385, 361);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(104, 45);
-            this.button27.TabIndex = 57;
-            this.button27.Text = "Eliminar";
-            this.button27.UseVisualStyleBackColor = false;
+            this.eliminartalla.BackColor = System.Drawing.Color.Orange;
+            this.eliminartalla.Location = new System.Drawing.Point(385, 361);
+            this.eliminartalla.Name = "eliminartalla";
+            this.eliminartalla.Size = new System.Drawing.Size(104, 45);
+            this.eliminartalla.TabIndex = 57;
+            this.eliminartalla.Text = "Eliminar";
+            this.eliminartalla.UseVisualStyleBackColor = false;
+            this.eliminartalla.Click += new System.EventHandler(this.eliminartalla_Click);
             // 
-            // button28
+            // buscartalla
             // 
-            this.button28.BackColor = System.Drawing.Color.PaleGreen;
-            this.button28.Location = new System.Drawing.Point(260, 361);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(104, 45);
-            this.button28.TabIndex = 56;
-            this.button28.Text = "Buscar";
-            this.button28.UseVisualStyleBackColor = false;
+            this.buscartalla.BackColor = System.Drawing.Color.PaleGreen;
+            this.buscartalla.Location = new System.Drawing.Point(260, 361);
+            this.buscartalla.Name = "buscartalla";
+            this.buscartalla.Size = new System.Drawing.Size(104, 45);
+            this.buscartalla.TabIndex = 56;
+            this.buscartalla.Text = "Buscar";
+            this.buscartalla.UseVisualStyleBackColor = false;
             // 
-            // button29
+            // mostrartalla
             // 
-            this.button29.BackColor = System.Drawing.Color.PaleGreen;
-            this.button29.Location = new System.Drawing.Point(137, 361);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(104, 45);
-            this.button29.TabIndex = 55;
-            this.button29.Text = "Mostrar";
-            this.button29.UseVisualStyleBackColor = false;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
+            this.mostrartalla.BackColor = System.Drawing.Color.PaleGreen;
+            this.mostrartalla.Location = new System.Drawing.Point(137, 361);
+            this.mostrartalla.Name = "mostrartalla";
+            this.mostrartalla.Size = new System.Drawing.Size(104, 45);
+            this.mostrartalla.TabIndex = 55;
+            this.mostrartalla.Text = "Mostrar";
+            this.mostrartalla.UseVisualStyleBackColor = false;
+            this.mostrartalla.Click += new System.EventHandler(this.button29_Click);
             // 
-            // button30
+            // agregartalla
             // 
-            this.button30.BackColor = System.Drawing.Color.PaleGreen;
-            this.button30.Location = new System.Drawing.Point(14, 361);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(104, 45);
-            this.button30.TabIndex = 54;
-            this.button30.Text = "Agregar";
-            this.button30.UseVisualStyleBackColor = false;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
+            this.agregartalla.BackColor = System.Drawing.Color.PaleGreen;
+            this.agregartalla.Location = new System.Drawing.Point(14, 361);
+            this.agregartalla.Name = "agregartalla";
+            this.agregartalla.Size = new System.Drawing.Size(104, 45);
+            this.agregartalla.TabIndex = 54;
+            this.agregartalla.Text = "Agregar";
+            this.agregartalla.UseVisualStyleBackColor = false;
+            this.agregartalla.Click += new System.EventHandler(this.button30_Click);
             // 
             // dgvtalla
             // 
@@ -1604,15 +1605,15 @@
         private System.Windows.Forms.Button btnmostrarmarca;
         private System.Windows.Forms.Button btnagregarmarca;
         private System.Windows.Forms.DataGridView dgvmarca;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtidtalla;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txtnombretalla;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button modificartalla;
+        private System.Windows.Forms.Button eliminartalla;
+        private System.Windows.Forms.Button buscartalla;
+        private System.Windows.Forms.Button mostrartalla;
+        private System.Windows.Forms.Button agregartalla;
         private System.Windows.Forms.DataGridView dgvtalla;
         private System.Windows.Forms.TextBox txtidcolor;
         private System.Windows.Forms.Label label25;

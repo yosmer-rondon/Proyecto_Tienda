@@ -32,7 +32,7 @@ namespace Proyecto_Tienda__Diars_
         }
         public void listartalla()
         {
-            dgvmarca.DataSource = logMarca.Instancia.Listarmarca();
+            dgvtalla.DataSource = logTalla.Instancia.Listartalla();
         }
         public void listarcolor()
         {
@@ -214,10 +214,10 @@ namespace Proyecto_Tienda__Diars_
         {
             try
             {
-                entMarca c = new entMarca();
-                c.id_Marca = int.Parse(txtid_Marca.Text.Trim());
-                c.Nombre = txtNombre_marca.Text.Trim();
-                logMarca.Instancia.Editarmarca(c);
+                entTalla c = new entTalla();
+                c.id_Talla = int.Parse(txtidtalla.Text.Trim());
+                c.Talla = txtnombretalla.Text.Trim();
+                logTalla.Instancia.Editartalla(c);
             }
             catch (Exception ex)
             {
@@ -246,12 +246,40 @@ namespace Proyecto_Tienda__Diars_
 
         private void button29_Click(object sender, EventArgs e)
         {
-
+            listartalla();
         }
 
         private void button30_Click(object sender, EventArgs e)
         {
+            try
+            {
+                entTalla mep = new entTalla();
+                mep.Talla = txtnombretalla.Text.Trim();
+                logTalla.Instancia.Insertartalla(mep);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listartalla();
+        }
 
+        private void eliminartalla_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTalla c = new entTalla();
+
+                c.id_Talla = int.Parse(txtidtalla.Text.Trim());
+                logTalla.Instancia.Eliminartalla(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listartalla();
         }
     }
 }
