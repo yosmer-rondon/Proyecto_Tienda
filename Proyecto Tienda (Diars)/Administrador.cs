@@ -30,6 +30,10 @@ namespace Proyecto_Tienda__Diars_
         {
             dgvmarca.DataSource = logMarca.Instancia.Listarmarca();
         }
+        public void listartalla()
+        {
+            dgvtalla.DataSource = logTalla.Instancia.listartalla();
+        }
         private void Administrador_Load(object sender, EventArgs e)
         {
 
@@ -160,6 +164,61 @@ namespace Proyecto_Tienda__Diars_
             }
             //LimpiarVariables();
             listarmarca();
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTalla mep = new entTalla();
+                mep.Talla = txtnombretalla.Text.Trim();
+                logTalla.Instancia.Insertartalla(mep);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listartalla();
+        }
+
+        private void btnmostrar_Click(object sender, EventArgs e)
+        {
+            listartalla();
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTalla c = new entTalla();
+
+                c.id_Talla = int.Parse(txtid_talla.Text.Trim());
+                logTalla.Instancia.Eliminartalla(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listartalla();
+        }
+
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTalla c = new entTalla();
+                c.id_Talla = int.Parse(txtid_talla.Text.Trim());
+                c.Talla = txtnombretalla.Text.Trim();
+                logTalla.Instancia.Editartalla(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listartalla();
         }
     }
 }
