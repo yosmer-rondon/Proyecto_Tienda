@@ -96,7 +96,7 @@
             this.btnagregarmarca = new System.Windows.Forms.Button();
             this.dgvmarca = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtid_talla = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtnombretalla = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -128,6 +128,7 @@
             this.button39 = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Empleado = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.Empleados = new System.Windows.Forms.TabPage();
@@ -154,7 +155,6 @@
             this.Cargo = new System.Windows.Forms.TabPage();
             this.Pedidos = new System.Windows.Forms.TabPage();
             this.Ventas = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tapcontrol.SuspendLayout();
             this.Cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -218,7 +218,6 @@
             this.Cliente.Size = new System.Drawing.Size(1352, 797);
             this.Cliente.TabIndex = 0;
             this.Cliente.Text = "Clientes";
-            //this.Cliente.Click += new System.EventHandler(this.Cliente_Click);
             // 
             // textBox8
             // 
@@ -870,7 +869,7 @@
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.SkyBlue;
-            this.tabPage6.Controls.Add(this.textBox18);
+            this.tabPage6.Controls.Add(this.txtid_talla);
             this.tabPage6.Controls.Add(this.label22);
             this.tabPage6.Controls.Add(this.txtnombretalla);
             this.tabPage6.Controls.Add(this.label24);
@@ -887,12 +886,12 @@
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Talla";
             // 
-            // textBox18
+            // txtid_talla
             // 
-            this.textBox18.Location = new System.Drawing.Point(137, 28);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(180, 34);
-            this.textBox18.TabIndex = 62;
+            this.txtid_talla.Location = new System.Drawing.Point(137, 28);
+            this.txtid_talla.Name = "txtid_talla";
+            this.txtid_talla.Size = new System.Drawing.Size(180, 34);
+            this.txtid_talla.TabIndex = 62;
             // 
             // label22
             // 
@@ -1210,6 +1209,16 @@
             this.dataGridView7.Size = new System.Drawing.Size(1320, 309);
             this.dataGridView7.TabIndex = 63;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 36);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1335, 748);
+            this.tabPage1.TabIndex = 6;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // Empleado
             // 
             this.Empleado.BackColor = System.Drawing.Color.SkyBlue;
@@ -1462,16 +1471,6 @@
             this.Ventas.Text = "Ventas";
             this.Ventas.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 36);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1335, 748);
-            this.tabPage1.TabIndex = 6;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1614,7 +1613,7 @@
         private System.Windows.Forms.Button btnmostrarmarca;
         private System.Windows.Forms.Button btnagregarmarca;
         private System.Windows.Forms.DataGridView dgvmarca;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtid_talla;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtnombretalla;
         private System.Windows.Forms.Label label24;
