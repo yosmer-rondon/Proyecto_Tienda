@@ -166,6 +166,7 @@ namespace Proyecto_Tienda__Diars_
             listarmarca();
         }
 
+ yolvin
         private void button30_Click(object sender, EventArgs e)
         {
             try
@@ -219,6 +220,10 @@ namespace Proyecto_Tienda__Diars_
             }
             //LimpiarVariables();
             listartalla();
+        private void Cliente_Click(object sender, EventArgs e)
+        {
+
+ master
         }
     }
 }
