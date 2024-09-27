@@ -26,6 +26,10 @@ namespace Proyecto_Tienda__Diars_
         {
             dgvtipoproducto.DataSource = logTipo_producto.Instancia.ListartipoProducto();
         }
+        public void listarmarca()
+        {
+            dgvmarca.DataSource = logMarca.Instancia.Listarmarca();
+        }
         private void Administrador_Load(object sender, EventArgs e)
         {
 
@@ -70,7 +74,19 @@ namespace Proyecto_Tienda__Diars_
 
         private void button21_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                entMarca c = new entMarca();
+                c.id_Marca = int.Parse(txtidtipoproducto.Text.Trim());
+                c.Nombre = txtnombretipoproducto.Text.Trim();
+                logMarca.Instancia.Editarmarca(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listartipoproducto();
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -106,6 +122,44 @@ namespace Proyecto_Tienda__Diars_
             }
             //LimpiarVariables();
             listartipoproducto();
+        }
+
+        private void btnagregarmarca_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entMarca mep = new entMarca();
+                mep.Nombre = txtNombre_marca.Text.Trim();
+                logMarca.Instancia.Insertarmarca(mep);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listarmarca();
+        }
+
+        private void btnmostrarmarca_Click(object sender, EventArgs e)
+        {
+            listarmarca();
+        }
+
+        private void btneliminarmarca_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entMarca c = new entMarca();
+
+                c.id_Marca = int.Parse(txtid_Marca.Text.Trim());
+                logMarca.Instancia.Eliminarmarca(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listarmarca();
         }
     }
 }

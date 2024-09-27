@@ -85,16 +85,16 @@
             this.button20 = new System.Windows.Forms.Button();
             this.dgvtipoproducto = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.id_Marca = new System.Windows.Forms.TextBox();
+            this.txtid_Marca = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.Nombre_marca = new System.Windows.Forms.TextBox();
+            this.txtNombre_marca = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.btnmodificarmarca = new System.Windows.Forms.Button();
+            this.btneliminarmarca = new System.Windows.Forms.Button();
+            this.btnbuscarmarca = new System.Windows.Forms.Button();
+            this.btnmostrarmarca = new System.Windows.Forms.Button();
+            this.btnagregarmarca = new System.Windows.Forms.Button();
+            this.dgvmarca = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -164,7 +164,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvtipoproducto)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmarca)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.tabPage7.SuspendLayout();
@@ -750,16 +750,16 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.SkyBlue;
-            this.tabPage5.Controls.Add(this.id_Marca);
+            this.tabPage5.Controls.Add(this.txtid_Marca);
             this.tabPage5.Controls.Add(this.label21);
-            this.tabPage5.Controls.Add(this.Nombre_marca);
+            this.tabPage5.Controls.Add(this.txtNombre_marca);
             this.tabPage5.Controls.Add(this.label23);
-            this.tabPage5.Controls.Add(this.button21);
-            this.tabPage5.Controls.Add(this.button22);
-            this.tabPage5.Controls.Add(this.button23);
-            this.tabPage5.Controls.Add(this.button24);
-            this.tabPage5.Controls.Add(this.button25);
-            this.tabPage5.Controls.Add(this.dataGridView4);
+            this.tabPage5.Controls.Add(this.btnmodificarmarca);
+            this.tabPage5.Controls.Add(this.btneliminarmarca);
+            this.tabPage5.Controls.Add(this.btnbuscarmarca);
+            this.tabPage5.Controls.Add(this.btnmostrarmarca);
+            this.tabPage5.Controls.Add(this.btnagregarmarca);
+            this.tabPage5.Controls.Add(this.dgvmarca);
             this.tabPage5.Location = new System.Drawing.Point(4, 36);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -767,12 +767,12 @@
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Marca";
             // 
-            // id_Marca
+            // txtid_Marca
             // 
-            this.id_Marca.Location = new System.Drawing.Point(137, 28);
-            this.id_Marca.Name = "id_Marca";
-            this.id_Marca.Size = new System.Drawing.Size(180, 34);
-            this.id_Marca.TabIndex = 52;
+            this.txtid_Marca.Location = new System.Drawing.Point(137, 28);
+            this.txtid_Marca.Name = "txtid_Marca";
+            this.txtid_Marca.Size = new System.Drawing.Size(180, 34);
+            this.txtid_Marca.TabIndex = 52;
             // 
             // label21
             // 
@@ -783,12 +783,12 @@
             this.label21.TabIndex = 51;
             this.label21.Text = "id marca";
             // 
-            // Nombre_marca
+            // txtNombre_marca
             // 
-            this.Nombre_marca.Location = new System.Drawing.Point(137, 85);
-            this.Nombre_marca.Name = "Nombre_marca";
-            this.Nombre_marca.Size = new System.Drawing.Size(255, 34);
-            this.Nombre_marca.TabIndex = 49;
+            this.txtNombre_marca.Location = new System.Drawing.Point(137, 85);
+            this.txtNombre_marca.Name = "txtNombre_marca";
+            this.txtNombre_marca.Size = new System.Drawing.Size(255, 34);
+            this.txtNombre_marca.TabIndex = 49;
             // 
             // label23
             // 
@@ -799,67 +799,70 @@
             this.label23.TabIndex = 47;
             this.label23.Text = "Nombre";
             // 
-            // button21
+            // btnmodificarmarca
             // 
-            this.button21.BackColor = System.Drawing.Color.PaleGreen;
-            this.button21.Location = new System.Drawing.Point(506, 361);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(118, 45);
-            this.button21.TabIndex = 46;
-            this.button21.Text = "Modificar";
-            this.button21.UseVisualStyleBackColor = false;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.btnmodificarmarca.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnmodificarmarca.Location = new System.Drawing.Point(506, 361);
+            this.btnmodificarmarca.Name = "btnmodificarmarca";
+            this.btnmodificarmarca.Size = new System.Drawing.Size(118, 45);
+            this.btnmodificarmarca.TabIndex = 46;
+            this.btnmodificarmarca.Text = "Modificar";
+            this.btnmodificarmarca.UseVisualStyleBackColor = false;
+            this.btnmodificarmarca.Click += new System.EventHandler(this.button21_Click);
             // 
-            // button22
+            // btneliminarmarca
             // 
-            this.button22.BackColor = System.Drawing.Color.Orange;
-            this.button22.Location = new System.Drawing.Point(385, 361);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(104, 45);
-            this.button22.TabIndex = 45;
-            this.button22.Text = "Eliminar";
-            this.button22.UseVisualStyleBackColor = false;
+            this.btneliminarmarca.BackColor = System.Drawing.Color.Orange;
+            this.btneliminarmarca.Location = new System.Drawing.Point(385, 361);
+            this.btneliminarmarca.Name = "btneliminarmarca";
+            this.btneliminarmarca.Size = new System.Drawing.Size(104, 45);
+            this.btneliminarmarca.TabIndex = 45;
+            this.btneliminarmarca.Text = "Eliminar";
+            this.btneliminarmarca.UseVisualStyleBackColor = false;
+            this.btneliminarmarca.Click += new System.EventHandler(this.btneliminarmarca_Click);
             // 
-            // button23
+            // btnbuscarmarca
             // 
-            this.button23.BackColor = System.Drawing.Color.PaleGreen;
-            this.button23.Location = new System.Drawing.Point(260, 361);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(104, 45);
-            this.button23.TabIndex = 44;
-            this.button23.Text = "Buscar";
-            this.button23.UseVisualStyleBackColor = false;
+            this.btnbuscarmarca.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnbuscarmarca.Location = new System.Drawing.Point(260, 361);
+            this.btnbuscarmarca.Name = "btnbuscarmarca";
+            this.btnbuscarmarca.Size = new System.Drawing.Size(104, 45);
+            this.btnbuscarmarca.TabIndex = 44;
+            this.btnbuscarmarca.Text = "Buscar";
+            this.btnbuscarmarca.UseVisualStyleBackColor = false;
             // 
-            // button24
+            // btnmostrarmarca
             // 
-            this.button24.BackColor = System.Drawing.Color.PaleGreen;
-            this.button24.Location = new System.Drawing.Point(137, 361);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(104, 45);
-            this.button24.TabIndex = 43;
-            this.button24.Text = "Mostrar";
-            this.button24.UseVisualStyleBackColor = false;
+            this.btnmostrarmarca.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnmostrarmarca.Location = new System.Drawing.Point(137, 361);
+            this.btnmostrarmarca.Name = "btnmostrarmarca";
+            this.btnmostrarmarca.Size = new System.Drawing.Size(104, 45);
+            this.btnmostrarmarca.TabIndex = 43;
+            this.btnmostrarmarca.Text = "Mostrar";
+            this.btnmostrarmarca.UseVisualStyleBackColor = false;
+            this.btnmostrarmarca.Click += new System.EventHandler(this.btnmostrarmarca_Click);
             // 
-            // button25
+            // btnagregarmarca
             // 
-            this.button25.BackColor = System.Drawing.Color.PaleGreen;
-            this.button25.Location = new System.Drawing.Point(14, 361);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(104, 45);
-            this.button25.TabIndex = 42;
-            this.button25.Text = "Agregar";
-            this.button25.UseVisualStyleBackColor = false;
+            this.btnagregarmarca.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnagregarmarca.Location = new System.Drawing.Point(14, 361);
+            this.btnagregarmarca.Name = "btnagregarmarca";
+            this.btnagregarmarca.Size = new System.Drawing.Size(104, 45);
+            this.btnagregarmarca.TabIndex = 42;
+            this.btnagregarmarca.Text = "Agregar";
+            this.btnagregarmarca.UseVisualStyleBackColor = false;
+            this.btnagregarmarca.Click += new System.EventHandler(this.btnagregarmarca_Click);
             // 
-            // dataGridView4
+            // dgvmarca
             // 
-            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(7, 412);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.Size = new System.Drawing.Size(1320, 309);
-            this.dataGridView4.TabIndex = 41;
+            this.dgvmarca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvmarca.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgvmarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvmarca.Location = new System.Drawing.Point(7, 412);
+            this.dgvmarca.Name = "dgvmarca";
+            this.dgvmarca.ReadOnly = true;
+            this.dgvmarca.Size = new System.Drawing.Size(1320, 309);
+            this.dgvmarca.TabIndex = 41;
             // 
             // tabPage6
             // 
@@ -1477,7 +1480,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvtipoproducto)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmarca)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
@@ -1584,16 +1587,16 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.DataGridView dgvtipoproducto;
-        private System.Windows.Forms.TextBox id_Marca;
+        private System.Windows.Forms.TextBox txtid_Marca;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox Nombre_marca;
+        private System.Windows.Forms.TextBox txtNombre_marca;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Button btnmodificarmarca;
+        private System.Windows.Forms.Button btneliminarmarca;
+        private System.Windows.Forms.Button btnbuscarmarca;
+        private System.Windows.Forms.Button btnmostrarmarca;
+        private System.Windows.Forms.Button btnagregarmarca;
+        private System.Windows.Forms.DataGridView dgvmarca;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox20;

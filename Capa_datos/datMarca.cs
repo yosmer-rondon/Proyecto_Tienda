@@ -54,17 +54,16 @@ namespace Capa_datos
             }
             return lista;
         }
-        public Boolean Insertartipoproducto(entTipo_producto mep)
+        public Boolean InsertarMarca(entMarca marca)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("Insertartipoproducto", cn);
+                cmd = new SqlCommand("InsertarMarca", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombre", mep.Nombre);
-                cmd.Parameters.AddWithValue("@Descripcion", mep.Descripcion);
+                cmd.Parameters.AddWithValue("@Nombre", marca.Nombre);
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -80,5 +79,57 @@ namespace Capa_datos
             finally { cmd.Connection.Close(); }
             return inserta;
         }
+        public Boolean ModificarMarca(entMarca marca)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("ModificarMarca", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_Marca", marca.id_Marca);
+                cmd.Parameters.AddWithValue("@Nombre", marca.Nombre);
+
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return edita;
+        }
+        public Boolean EliminarMarca(entMarca marca)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("EliminarMarca", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_Marca", marca.id_Marca);
+
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
+        }
+
     }
 }

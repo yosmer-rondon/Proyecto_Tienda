@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="logLogin.cs" />
+    <Compile Include="logMarca.cs" />
     <Compile Include="logProducto.cs" />
     <Compile Include="logTipo_producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
