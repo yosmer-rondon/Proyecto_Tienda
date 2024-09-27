@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="datLogin.cs" />
+    <Compile Include="datMarca.cs" />
     <Compile Include="datProducto.cs" />
     <Compile Include="datTipo_producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
