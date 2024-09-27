@@ -85,7 +85,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Cargo = new System.Windows.Forms.TabPage();
             this.Pedidos = new System.Windows.Forms.TabPage();
-            this.Compras = new System.Windows.Forms.TabPage();
+            this.Ventas = new System.Windows.Forms.TabPage();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -102,8 +102,8 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtdescripciontipoproducto = new System.Windows.Forms.TextBox();
+            this.txtnombretipoproducto = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.button16 = new System.Windows.Forms.Button();
@@ -112,7 +112,7 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.dgvtipoproducto = new System.Windows.Forms.DataGridView();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtidtipoproducto = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -183,7 +183,7 @@
             this.tapcontrol.Controls.Add(this.Producto);
             this.tapcontrol.Controls.Add(this.Empleado);
             this.tapcontrol.Controls.Add(this.Pedidos);
-            this.tapcontrol.Controls.Add(this.Compras);
+            this.tapcontrol.Controls.Add(this.Ventas);
             this.tapcontrol.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tapcontrol.Location = new System.Drawing.Point(12, 12);
             this.tapcontrol.Name = "tapcontrol";
@@ -411,49 +411,54 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.PaleGreen;
             this.button5.Location = new System.Drawing.Point(505, 379);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(118, 45);
             this.button5.TabIndex = 5;
             this.button5.Text = "Modificar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Orange;
             this.button4.Location = new System.Drawing.Point(384, 379);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(104, 45);
             this.button4.TabIndex = 4;
             this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.PaleGreen;
             this.button3.Location = new System.Drawing.Point(259, 379);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 45);
             this.button3.TabIndex = 3;
             this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.PaleGreen;
             this.button2.Location = new System.Drawing.Point(136, 379);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 45);
             this.button2.TabIndex = 2;
             this.button2.Text = "Mostrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.PaleGreen;
             this.button1.Location = new System.Drawing.Point(13, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 45);
             this.button1.TabIndex = 1;
             this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // dgvproducto
             // 
@@ -469,10 +474,10 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.SkyBlue;
-            this.tabPage4.Controls.Add(this.textBox15);
+            this.tabPage4.Controls.Add(this.txtidtipoproducto);
             this.tabPage4.Controls.Add(this.label19);
-            this.tabPage4.Controls.Add(this.textBox14);
-            this.tabPage4.Controls.Add(this.textBox16);
+            this.tabPage4.Controls.Add(this.txtdescripciontipoproducto);
+            this.tabPage4.Controls.Add(this.txtnombretipoproducto);
             this.tabPage4.Controls.Add(this.label26);
             this.tabPage4.Controls.Add(this.label27);
             this.tabPage4.Controls.Add(this.button16);
@@ -811,14 +816,14 @@
             this.Pedidos.Text = "Pedidos";
             this.Pedidos.UseVisualStyleBackColor = true;
             // 
-            // Compras
+            // Ventas
             // 
-            this.Compras.Location = new System.Drawing.Point(4, 36);
-            this.Compras.Name = "Compras";
-            this.Compras.Size = new System.Drawing.Size(1352, 797);
-            this.Compras.TabIndex = 4;
-            this.Compras.Text = "Compras";
-            this.Compras.UseVisualStyleBackColor = true;
+            this.Ventas.Location = new System.Drawing.Point(4, 36);
+            this.Ventas.Name = "Ventas";
+            this.Ventas.Size = new System.Drawing.Size(1352, 797);
+            this.Ventas.TabIndex = 4;
+            this.Ventas.Text = "Ventas";
+            this.Ventas.UseVisualStyleBackColor = true;
             // 
             // textBox8
             // 
@@ -902,12 +907,13 @@
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.Orange;
             this.button6.Location = new System.Drawing.Point(515, 388);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(118, 45);
             this.button6.TabIndex = 46;
             this.button6.Text = "Modificar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -920,30 +926,33 @@
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.Orange;
             this.button8.Location = new System.Drawing.Point(269, 388);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(104, 45);
             this.button8.TabIndex = 44;
             this.button8.Text = "Buscar";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.Orange;
             this.button9.Location = new System.Drawing.Point(146, 388);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(104, 45);
             this.button9.TabIndex = 43;
             this.button9.Text = "Mostrar";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // button10
             // 
+            this.button10.BackColor = System.Drawing.Color.Orange;
             this.button10.Location = new System.Drawing.Point(23, 388);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(104, 45);
             this.button10.TabIndex = 42;
             this.button10.Text = "Agregar";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -956,20 +965,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(1320, 309);
             this.dataGridView1.TabIndex = 41;
             // 
-            // textBox14
+            // txtdescripciontipoproducto
             // 
-            this.textBox14.Location = new System.Drawing.Point(161, 142);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(231, 142);
-            this.textBox14.TabIndex = 38;
+            this.txtdescripciontipoproducto.Location = new System.Drawing.Point(161, 142);
+            this.txtdescripciontipoproducto.Multiline = true;
+            this.txtdescripciontipoproducto.Name = "txtdescripciontipoproducto";
+            this.txtdescripciontipoproducto.Size = new System.Drawing.Size(231, 142);
+            this.txtdescripciontipoproducto.TabIndex = 38;
             // 
-            // textBox16
+            // txtnombretipoproducto
             // 
-            this.textBox16.Location = new System.Drawing.Point(137, 89);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(255, 34);
-            this.textBox16.TabIndex = 36;
+            this.txtnombretipoproducto.Location = new System.Drawing.Point(137, 89);
+            this.txtnombretipoproducto.Name = "txtnombretipoproducto";
+            this.txtnombretipoproducto.Size = new System.Drawing.Size(255, 34);
+            this.txtnombretipoproducto.TabIndex = 36;
             // 
             // label26
             // 
@@ -991,49 +1000,55 @@
             // 
             // button16
             // 
+            this.button16.BackColor = System.Drawing.Color.PaleGreen;
             this.button16.Location = new System.Drawing.Point(506, 365);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(118, 45);
             this.button16.TabIndex = 27;
             this.button16.Text = "Modificar";
-            this.button16.UseVisualStyleBackColor = true;
+            this.button16.UseVisualStyleBackColor = false;
             // 
             // button17
             // 
+            this.button17.BackColor = System.Drawing.Color.Orange;
             this.button17.Location = new System.Drawing.Point(385, 365);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(104, 45);
             this.button17.TabIndex = 26;
             this.button17.Text = "Eliminar";
-            this.button17.UseVisualStyleBackColor = true;
+            this.button17.UseVisualStyleBackColor = false;
             // 
             // button18
             // 
+            this.button18.BackColor = System.Drawing.Color.PaleGreen;
             this.button18.Location = new System.Drawing.Point(260, 365);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(104, 45);
             this.button18.TabIndex = 25;
             this.button18.Text = "Buscar";
-            this.button18.UseVisualStyleBackColor = true;
+            this.button18.UseVisualStyleBackColor = false;
             // 
             // button19
             // 
+            this.button19.BackColor = System.Drawing.Color.PaleGreen;
             this.button19.Location = new System.Drawing.Point(137, 365);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(104, 45);
             this.button19.TabIndex = 24;
             this.button19.Text = "Mostrar";
-            this.button19.UseVisualStyleBackColor = true;
+            this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
+            this.button20.BackColor = System.Drawing.Color.PaleGreen;
             this.button20.Location = new System.Drawing.Point(14, 365);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(104, 45);
             this.button20.TabIndex = 23;
-            this.button20.Text = "Agregar";
-            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Text = "agregartipoproducto";
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // dgvtipoproducto
             // 
@@ -1046,12 +1061,12 @@
             this.dgvtipoproducto.Size = new System.Drawing.Size(1320, 309);
             this.dgvtipoproducto.TabIndex = 22;
             // 
-            // textBox15
+            // txtidtipoproducto
             // 
-            this.textBox15.Location = new System.Drawing.Point(206, 32);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(186, 34);
-            this.textBox15.TabIndex = 40;
+            this.txtidtipoproducto.Location = new System.Drawing.Point(206, 32);
+            this.txtidtipoproducto.Name = "txtidtipoproducto";
+            this.txtidtipoproducto.Size = new System.Drawing.Size(186, 34);
+            this.txtidtipoproducto.TabIndex = 40;
             // 
             // label19
             // 
@@ -1096,48 +1111,53 @@
             // 
             // button21
             // 
+            this.button21.BackColor = System.Drawing.Color.PaleGreen;
             this.button21.Location = new System.Drawing.Point(506, 361);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(118, 45);
             this.button21.TabIndex = 46;
             this.button21.Text = "Modificar";
-            this.button21.UseVisualStyleBackColor = true;
+            this.button21.UseVisualStyleBackColor = false;
             // 
             // button22
             // 
+            this.button22.BackColor = System.Drawing.Color.Orange;
             this.button22.Location = new System.Drawing.Point(385, 361);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(104, 45);
             this.button22.TabIndex = 45;
             this.button22.Text = "Eliminar";
-            this.button22.UseVisualStyleBackColor = true;
+            this.button22.UseVisualStyleBackColor = false;
             // 
             // button23
             // 
+            this.button23.BackColor = System.Drawing.Color.PaleGreen;
             this.button23.Location = new System.Drawing.Point(260, 361);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(104, 45);
             this.button23.TabIndex = 44;
             this.button23.Text = "Buscar";
-            this.button23.UseVisualStyleBackColor = true;
+            this.button23.UseVisualStyleBackColor = false;
             // 
             // button24
             // 
+            this.button24.BackColor = System.Drawing.Color.PaleGreen;
             this.button24.Location = new System.Drawing.Point(137, 361);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(104, 45);
             this.button24.TabIndex = 43;
             this.button24.Text = "Mostrar";
-            this.button24.UseVisualStyleBackColor = true;
+            this.button24.UseVisualStyleBackColor = false;
             // 
             // button25
             // 
+            this.button25.BackColor = System.Drawing.Color.PaleGreen;
             this.button25.Location = new System.Drawing.Point(14, 361);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(104, 45);
             this.button25.TabIndex = 42;
             this.button25.Text = "Agregar";
-            this.button25.UseVisualStyleBackColor = true;
+            this.button25.UseVisualStyleBackColor = false;
             // 
             // dataGridView4
             // 
@@ -1184,48 +1204,53 @@
             // 
             // button26
             // 
+            this.button26.BackColor = System.Drawing.Color.PaleGreen;
             this.button26.Location = new System.Drawing.Point(506, 361);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(118, 45);
             this.button26.TabIndex = 58;
             this.button26.Text = "Modificar";
-            this.button26.UseVisualStyleBackColor = true;
+            this.button26.UseVisualStyleBackColor = false;
             // 
             // button27
             // 
+            this.button27.BackColor = System.Drawing.Color.Orange;
             this.button27.Location = new System.Drawing.Point(385, 361);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(104, 45);
             this.button27.TabIndex = 57;
             this.button27.Text = "Eliminar";
-            this.button27.UseVisualStyleBackColor = true;
+            this.button27.UseVisualStyleBackColor = false;
             // 
             // button28
             // 
+            this.button28.BackColor = System.Drawing.Color.PaleGreen;
             this.button28.Location = new System.Drawing.Point(260, 361);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(104, 45);
             this.button28.TabIndex = 56;
             this.button28.Text = "Buscar";
-            this.button28.UseVisualStyleBackColor = true;
+            this.button28.UseVisualStyleBackColor = false;
             // 
             // button29
             // 
+            this.button29.BackColor = System.Drawing.Color.PaleGreen;
             this.button29.Location = new System.Drawing.Point(137, 361);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(104, 45);
             this.button29.TabIndex = 55;
             this.button29.Text = "Mostrar";
-            this.button29.UseVisualStyleBackColor = true;
+            this.button29.UseVisualStyleBackColor = false;
             // 
             // button30
             // 
+            this.button30.BackColor = System.Drawing.Color.PaleGreen;
             this.button30.Location = new System.Drawing.Point(14, 361);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(104, 45);
             this.button30.TabIndex = 54;
             this.button30.Text = "Agregar";
-            this.button30.UseVisualStyleBackColor = true;
+            this.button30.UseVisualStyleBackColor = false;
             // 
             // dataGridView5
             // 
@@ -1272,48 +1297,53 @@
             // 
             // button31
             // 
+            this.button31.BackColor = System.Drawing.Color.PaleGreen;
             this.button31.Location = new System.Drawing.Point(506, 361);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(118, 45);
             this.button31.TabIndex = 68;
             this.button31.Text = "Modificar";
-            this.button31.UseVisualStyleBackColor = true;
+            this.button31.UseVisualStyleBackColor = false;
             // 
             // button32
             // 
+            this.button32.BackColor = System.Drawing.Color.Orange;
             this.button32.Location = new System.Drawing.Point(385, 361);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(104, 45);
             this.button32.TabIndex = 67;
             this.button32.Text = "Eliminar";
-            this.button32.UseVisualStyleBackColor = true;
+            this.button32.UseVisualStyleBackColor = false;
             // 
             // button33
             // 
+            this.button33.BackColor = System.Drawing.Color.PaleGreen;
             this.button33.Location = new System.Drawing.Point(260, 361);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(104, 45);
             this.button33.TabIndex = 66;
             this.button33.Text = "Buscar";
-            this.button33.UseVisualStyleBackColor = true;
+            this.button33.UseVisualStyleBackColor = false;
             // 
             // button34
             // 
+            this.button34.BackColor = System.Drawing.Color.PaleGreen;
             this.button34.Location = new System.Drawing.Point(137, 361);
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(104, 45);
             this.button34.TabIndex = 65;
             this.button34.Text = "Mostrar";
-            this.button34.UseVisualStyleBackColor = true;
+            this.button34.UseVisualStyleBackColor = false;
             // 
             // button35
             // 
+            this.button35.BackColor = System.Drawing.Color.PaleGreen;
             this.button35.Location = new System.Drawing.Point(14, 361);
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(104, 45);
             this.button35.TabIndex = 64;
             this.button35.Text = "Agregar";
-            this.button35.UseVisualStyleBackColor = true;
+            this.button35.UseVisualStyleBackColor = false;
             // 
             // dataGridView6
             // 
@@ -1360,48 +1390,53 @@
             // 
             // button36
             // 
+            this.button36.BackColor = System.Drawing.Color.PaleGreen;
             this.button36.Location = new System.Drawing.Point(506, 361);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(118, 45);
             this.button36.TabIndex = 68;
             this.button36.Text = "Modificar";
-            this.button36.UseVisualStyleBackColor = true;
+            this.button36.UseVisualStyleBackColor = false;
             // 
             // button37
             // 
+            this.button37.BackColor = System.Drawing.Color.Orange;
             this.button37.Location = new System.Drawing.Point(385, 361);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(104, 45);
             this.button37.TabIndex = 67;
             this.button37.Text = "Eliminar";
-            this.button37.UseVisualStyleBackColor = true;
+            this.button37.UseVisualStyleBackColor = false;
             // 
             // button38
             // 
+            this.button38.BackColor = System.Drawing.Color.PaleGreen;
             this.button38.Location = new System.Drawing.Point(260, 361);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(104, 45);
             this.button38.TabIndex = 66;
             this.button38.Text = "Buscar";
-            this.button38.UseVisualStyleBackColor = true;
+            this.button38.UseVisualStyleBackColor = false;
             // 
             // button39
             // 
+            this.button39.BackColor = System.Drawing.Color.PaleGreen;
             this.button39.Location = new System.Drawing.Point(137, 361);
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(104, 45);
             this.button39.TabIndex = 65;
             this.button39.Text = "Mostrar";
-            this.button39.UseVisualStyleBackColor = true;
+            this.button39.UseVisualStyleBackColor = false;
             // 
             // button40
             // 
+            this.button40.BackColor = System.Drawing.Color.PaleGreen;
             this.button40.Location = new System.Drawing.Point(14, 361);
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(104, 45);
             this.button40.TabIndex = 64;
             this.button40.Text = "Agregar";
-            this.button40.UseVisualStyleBackColor = true;
+            this.button40.UseVisualStyleBackColor = false;
             // 
             // dataGridView7
             // 
@@ -1517,7 +1552,7 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TabPage Cargo;
         private System.Windows.Forms.TabPage Pedidos;
-        private System.Windows.Forms.TabPage Compras;
+        private System.Windows.Forms.TabPage Ventas;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox5;
@@ -1534,10 +1569,10 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtidtipoproducto;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtdescripciontipoproducto;
+        private System.Windows.Forms.TextBox txtnombretipoproducto;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Button button16;

@@ -1,4 +1,5 @@
-﻿using Capa_logica;
+﻿using Capa_entidad;
+using Capa_logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,6 +48,23 @@ namespace Proyecto_Tienda__Diars_
 
         private void button19_Click(object sender, EventArgs e)
         {
+            listartipoproducto();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTipo_producto mep = new entTipo_producto();
+                mep.Nombre = txtnombretipoproducto.Text.Trim();
+                mep.Descripcion = txtdescripciontipoproducto.Text.Trim();
+                logTipo_producto.Instancia.Insertartipoproducto(mep);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
             listartipoproducto();
         }
     }

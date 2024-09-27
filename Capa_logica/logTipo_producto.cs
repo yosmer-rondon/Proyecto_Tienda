@@ -26,6 +26,10 @@ namespace Capa_logica
         {
             return datTipo_producto.Instancia.ListartipoProducto();
         }
+        public void Insertartipoproducto(entTipo_producto tip)
+        {
+            datTipo_producto.Instancia.Insertartipoproducto(tip);
+        }
         #endregion singleton
     }
 }

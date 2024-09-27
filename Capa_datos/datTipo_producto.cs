@@ -31,7 +31,7 @@ namespace Capa_datos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("MostrarProductos", cn);
+                cmd = new SqlCommand("MostrarTipoProductos", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -54,6 +54,32 @@ namespace Capa_datos
                 cmd.Connection.Close();
             }
             return lista;
+        }
+        public Boolean Insertartipoproducto(entTipo_producto mep)
+        {
+            SqlCommand cmd = null;
+            Boolean inserta = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("Insertartipoproducto", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Nombre", mep.Nombre);
+                cmd.Parameters.AddWithValue("@Descripcion", mep.Descripcion);
+
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserta = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return inserta;
         }
     }
 }
