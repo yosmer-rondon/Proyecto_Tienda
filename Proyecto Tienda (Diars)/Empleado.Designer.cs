@@ -119,7 +119,7 @@
             this.ClientSize = new System.Drawing.Size(1384, 861);
             this.Controls.Add(this.tabControl1);
             this.Name = "Empleado";
-            this.Text = "Empleado";
+            this.Text = " ";
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
