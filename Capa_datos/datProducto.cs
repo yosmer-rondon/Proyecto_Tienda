@@ -40,7 +40,7 @@ namespace Capa_datos
                 while (dr.Read())
                 {
                     entProducto Cli = new entProducto();
-                    Cli.id_producto = Convert.ToInt32(dr["id"]);
+                    Cli.id_producto = Convert.ToInt32(dr["id_producto"]);
                     Cli.nombre = dr["nombre"].ToString();
                     Cli.stock = Convert.ToInt32(dr["stock"]);
                     Cli.precio = Convert.ToDouble(dr["precio"]);

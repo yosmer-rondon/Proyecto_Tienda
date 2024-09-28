@@ -390,16 +390,23 @@ namespace Proyecto_Tienda__Diars_
         {
             try
             {
-                entTalla mep = new entTalla();
-                mep.Talla = txtnombretalla.Text.Trim();
-                logTalla.Instancia.Insertartalla(mep);
+                entProducto mep = new entProducto();
+                mep.nombre = txtnombreproducto.Text.Trim();
+                mep.stock = Convert.ToInt32(txtstockproducto.Text.Trim());
+                mep.precio = Convert.ToDouble(txtprecioproducto.Text.Trim());
+                mep.NombreTipoProducto = cbtipoproducto.Text.Trim();
+                mep.NombreMarca = cbmarca.Text.Trim();
+                mep.NombreTalla = cbtalla.Text.Trim();
+                mep.NombreColor = cbcolor.Text.Trim();
+                mep.NombreCategoria = cbcategoria.Text.Trim();
+                logProducto.Instancia.Insertarproducto(mep);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error.." + ex);
             }
             //LimpiarVariables();
-            listartalla();
+            listarproducto();
         }
     }
 }

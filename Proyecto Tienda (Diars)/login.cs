@@ -20,7 +20,11 @@ namespace Proyecto_Tienda__Diars_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string dni = txtDNI.Text;
+            Administrador ad = new Administrador();
+            this.Hide();
+            ad.ShowDialog();
+            this.Show();
+            /*string dni = txtDNI.Text;
             string contraseña = txtcontraseña.Text;
 
             bool loginExitoso = logLogin.Instancia.VerificarLogin(dni, contraseña);
@@ -37,7 +41,7 @@ namespace Proyecto_Tienda__Diars_
             else
             {
                 MessageBox.Show("DNI o contraseña incorrectos");
-            }
+            }*/
 
         }
 
