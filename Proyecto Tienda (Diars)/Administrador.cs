@@ -17,6 +17,36 @@ namespace Proyecto_Tienda__Diars_
         public Administrador()
         {
             InitializeComponent();
+            llenarcomboxtalla();
+            llenarcomboxcolor();
+            llenarcomboxcategoria();
+            llenarcomboxmarca();
+            llenarcomboxtipoproducto();
+        }
+        public void llenarcomboxtalla()
+        {
+            cbtalla.DataSource = logProducto.Instancia.LlenarCombotalla();
+            cbtalla.DisplayMember = "Talla";
+        }
+        public void llenarcomboxcolor()
+        {
+            cbcolor.DataSource = logProducto.Instancia.LlenarCombocolor();
+            cbcolor.DisplayMember = "Nombre";
+        }
+        public void llenarcomboxcategoria()
+        {
+            cbcategoria.DataSource = logProducto.Instancia.LlenarCombocategoria();
+            cbcategoria.DisplayMember = "Nombre";
+        }
+        public void llenarcomboxmarca()
+        {
+            cbmarca.DataSource = logProducto.Instancia.LlenarCombomarca();
+            cbmarca.DisplayMember = "Nombre";
+        }
+        public void llenarcomboxtipoproducto()
+        {
+            cbtipoproducto.DataSource = logProducto.Instancia.LlenarComboTipoProducto();
+            cbtipoproducto.DisplayMember = "Nombre";
         }
         public void listarproducto()
         {
@@ -267,6 +297,7 @@ namespace Proyecto_Tienda__Diars_
             }
             //LimpiarVariables();
             listartalla();
+            llenarcomboxtalla();
         }
 
         private void eliminartalla_Click(object sender, EventArgs e)
@@ -324,6 +355,20 @@ namespace Proyecto_Tienda__Diars_
             listarcategoria();
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+        }
+
         private void modificarcategoria_Click(object sender, EventArgs e)
         {
             try
@@ -338,7 +383,23 @@ namespace Proyecto_Tienda__Diars_
                 MessageBox.Show("Error.." + ex);
             }
             //LimpiarVariables();
-            listarcolor();
+            listarcategoria();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTalla mep = new entTalla();
+                mep.Talla = txtnombretalla.Text.Trim();
+                logTalla.Instancia.Insertartalla(mep);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listartalla();
         }
     }
 }
