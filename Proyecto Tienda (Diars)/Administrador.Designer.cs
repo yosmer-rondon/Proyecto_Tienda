@@ -614,6 +614,7 @@
             this.dgvproducto.ReadOnly = true;
             this.dgvproducto.Size = new System.Drawing.Size(1320, 309);
             this.dgvproducto.TabIndex = 0;
+            this.dgvproducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproducto_CellClick);
             // 
             // tabPage4
             // 

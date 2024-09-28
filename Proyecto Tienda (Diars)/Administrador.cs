@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -51,6 +52,11 @@ namespace Proyecto_Tienda__Diars_
         public void listarproducto()
         {
             dgvproducto.DataSource = logProducto.Instancia.ListarProducto();
+            dgvproducto.Columns["NombreTipoProducto"].Visible = false;
+            dgvproducto.Columns["NombreMarca"].Visible = false;
+            dgvproducto.Columns["NombreTalla"].Visible = false;
+            dgvproducto.Columns["NombreColor"].Visible = false;
+            dgvproducto.Columns["NombreCategoria"].Visible = false;
         }
         public void listartipoproducto()
         {
@@ -112,6 +118,7 @@ namespace Proyecto_Tienda__Diars_
             }
             //LimpiarVariables();
             listartipoproducto();
+            llenarcomboxtipoproducto();
         }
 
         private void button21_Click(object sender, EventArgs e)
@@ -180,6 +187,7 @@ namespace Proyecto_Tienda__Diars_
             }
             //LimpiarVariables();
             listarmarca();
+            llenarcomboxmarca();
         }
 
         private void btnmostrarmarca_Click(object sender, EventArgs e)
@@ -218,6 +226,7 @@ namespace Proyecto_Tienda__Diars_
             }
             //LimpiarVariables();
             listarcolor();
+            llenarcomboxcolor();
         }
 
         private void mostrarcolor_Click(object sender, EventArgs e)
@@ -336,6 +345,7 @@ namespace Proyecto_Tienda__Diars_
             }
             //LimpiarVariables();
             listarcategoria();
+            llenarcomboxcategoria();
         }
 
         private void eliminarcategoria_Click(object sender, EventArgs e)
@@ -408,5 +418,33 @@ namespace Proyecto_Tienda__Diars_
             //LimpiarVariables();
             listarproducto();
         }
+
+        private void dgvproducto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvproducto.Rows[e.RowIndex];
+
+                // Obtener los IDs de la fila
+                int id_tipo_producto = Convert.ToInt32(row.Cells["id_tipo_producto"].Value);
+                int id_marca = Convert.ToInt32(row.Cells["id_marca"].Value);
+                int id_talla = Convert.ToInt32(row.Cells["id_talla"].Value);
+                int id_color = Convert.ToInt32(row.Cells["id_color"].Value);
+                int id_categoria = Convert.ToInt32(row.Cells["id_categoria"].Value);
+
+                // Cargar los valores en los TextBox
+                txtnombreproducto.Text = row.Cells["nombre"].Value.ToString();
+                txtstockproducto.Text = row.Cells["stock"].Value.ToString();
+                txtprecioproducto.Text = row.Cells["precio"].Value.ToString();
+
+                // Buscar los nombres de los ComboBox
+                cbtipoproducto.Text = logProducto.Instancia.ObtenerNombreTipoProducto(id_tipo_producto);
+                cbmarca.Text = logProducto.Instancia.ObtenerNombreMarca(id_marca);
+                cbtalla.Text = logProducto.Instancia.ObtenerNombreTalla(id_talla);
+                cbcolor.Text = logProducto.Instancia.ObtenerNombreColor(id_color);
+                cbcategoria.Text = logProducto.Instancia.ObtenerNombreCategoria(id_categoria);
+            }
+        }
+     
     }
 }

@@ -65,5 +65,26 @@ namespace Capa_logica
             return datProducto.Instancia.ObtenerTipoProducto();
         }
         ///////////////////llenarcombobox
+        ///
+        public string ObtenerNombreTipoProducto(int x)
+        {
+            return datProducto.Instancia.ObtenerNombreTipoProducto(x);
+        }
+        public string ObtenerNombreMarca(int x)
+        {
+            return datProducto.Instancia.ObtenerNombreMarca(x);
+        }
+        public string ObtenerNombreTalla(int x)
+        {
+            return datProducto.Instancia.ObtenerNombreTalla(x);
+        }
+        public string ObtenerNombreColor(int x)
+        {
+            return datProducto.Instancia.ObtenerNombreColor(x);
+        }
+        public string ObtenerNombreCategoria(int x)
+        {
+            return datProducto.Instancia.ObtenerNombreCategoria(x);
+        }
     }
 }

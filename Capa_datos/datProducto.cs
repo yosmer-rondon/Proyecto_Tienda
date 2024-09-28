@@ -215,6 +215,64 @@ namespace Capa_datos
             return dt;
         }
         /////////////////////////llenacombobox/////////////////////////
+        public string ObtenerNombreTipoProducto(int id)
+        {
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Nombre FROM tipo_producto WHERE id_tipo_producto = @id", cn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cn.Open();
+                object result = cmd.ExecuteScalar();
+                return result != null ? result.ToString() : string.Empty;
+            }
+        }
 
+        public string ObtenerNombreMarca(int id)
+        {
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Nombre FROM Marca WHERE id_Marca = @id", cn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cn.Open();
+                object result = cmd.ExecuteScalar();
+                return result != null ? result.ToString() : string.Empty;
+            }
+        }
+
+        public string ObtenerNombreTalla(int id)
+        {
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Talla FROM Talla WHERE id_Talla = @id", cn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cn.Open();
+                object result = cmd.ExecuteScalar();
+                return result != null ? result.ToString() : string.Empty;
+            }
+        }
+
+        public string ObtenerNombreColor(int id)
+        {
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Nombre FROM Color WHERE id_Color = @id", cn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cn.Open();
+                object result = cmd.ExecuteScalar();
+                return result != null ? result.ToString() : string.Empty;
+            }
+        }
+
+        public string ObtenerNombreCategoria(int id)
+        {
+            using (SqlConnection cn = Conexion.Instancia.Conectar())
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Nombre FROM Categoria WHERE id_Categoria = @id", cn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cn.Open();
+                object result = cmd.ExecuteScalar();
+                return result != null ? result.ToString() : string.Empty;
+            }
+        }
     }
 }
