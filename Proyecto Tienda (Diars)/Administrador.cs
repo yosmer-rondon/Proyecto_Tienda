@@ -23,6 +23,7 @@ namespace Proyecto_Tienda__Diars_
             llenarcomboxcategoria();
             llenarcomboxmarca();
             llenarcomboxtipoproducto();
+            txtidproducto.Enabled = false;
         }
         public void llenarcomboxtalla()
         {
@@ -433,6 +434,7 @@ namespace Proyecto_Tienda__Diars_
                 int id_categoria = Convert.ToInt32(row.Cells["id_categoria"].Value);
 
                 // Cargar los valores en los TextBox
+                txtidproducto.Text = row.Cells["id_producto"].Value.ToString();
                 txtnombreproducto.Text = row.Cells["nombre"].Value.ToString();
                 txtstockproducto.Text = row.Cells["stock"].Value.ToString();
                 txtprecioproducto.Text = row.Cells["precio"].Value.ToString();
@@ -445,6 +447,22 @@ namespace Proyecto_Tienda__Diars_
                 cbcategoria.Text = logProducto.Instancia.ObtenerNombreCategoria(id_categoria);
             }
         }
-     
+
+        private void btneliminarproducto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entProducto c = new entProducto();
+
+                c.id_producto = int.Parse(txtidproducto.Text.Trim());
+                logProducto.Instancia.Eliminarproducto(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listarproducto();
+        }
     }
 }
