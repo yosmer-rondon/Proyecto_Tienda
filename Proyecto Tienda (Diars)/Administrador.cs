@@ -25,6 +25,10 @@ namespace Proyecto_Tienda__Diars_
             llenarcomboxtipoproducto();
             txtidproducto.Enabled = false;
         }
+        public void listarClientes()
+        {
+            dgvcliente.DataSource = logCliente.Instancia.Listarcliente();
+        }
         public void llenarcomboxtalla()
         {
             cbtalla.DataSource = logProducto.Instancia.LlenarCombotalla();
@@ -368,16 +372,48 @@ namespace Proyecto_Tienda__Diars_
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                entCliente cliente = new entCliente();
+                cliente.Nombre = txtnombrecliente.Text.Trim();
+                cliente.Apellido = txtapellidoscliente.Text.Trim();
+                cliente.DNI = Convert.ToInt32(txtdnicliente.Text.Trim());
+                cliente.Telefono = Convert.ToInt32(txttelefonocliente.Text.Trim());
+                cliente.Estado = cbtestadocliente.Checked;
+                logCliente.Instancia.InsertarCliente(cliente);
+                //MessageBox.Show("Cliente agregado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            listarClientes(); 
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                entCliente c = new entCliente();
+                c.id_Cliente = int.Parse(txtidcliente.Text.Trim());
+                c.Nombre = txtnombrecliente.Text.Trim();
+                c.Apellido = txtapellidoscliente.Text.Trim();
+                c.DNI = Convert.ToInt32(txtdnicliente.Text);
+                c.Telefono = Convert.ToInt32(txttelefonocliente.Text);
+                c.Estado = Convert.ToBoolean(cbtestadocliente.Checked);
+                logCliente.Instancia.EditarCliente(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listarClientes();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            listarClientes();
         }
 
         private void modificarcategoria_Click(object sender, EventArgs e)
@@ -463,6 +499,41 @@ namespace Proyecto_Tienda__Diars_
             }
             //LimpiarVariables();
             listarproducto();
+        }
+
+        private void btneliminarcliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                    logCliente.Instancia.EliminarCliente(Convert.ToInt32(txtidcliente.Text));
+                    MessageBox.Show("Cliente eliminado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            listarClientes(); // Actualiza la tabla después de eliminar
+        }
+
+        private void Cliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvcliente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvcliente.Rows[e.RowIndex];
+                // Cargar los valores en los TextBox
+                txtidcliente.Text = row.Cells["id_Cliente"].Value.ToString();
+                txtnombrecliente.Text = row.Cells["Nombre"].Value.ToString();
+                txtapellidoscliente.Text = row.Cells["Apellido"].Value.ToString();
+                txtdnicliente.Text = row.Cells["Dni"].Value.ToString();
+                txttelefonocliente.Text = row.Cells["Telefono"].Value.ToString();
+                txtcorreocliente.Text = row.Cells["Estado"].Value.ToString();
+                cbtestadocliente.Checked = Convert.ToBoolean(row.Cells["Estado"].Value);
+            }
         }
     }
 }
