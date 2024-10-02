@@ -15,6 +15,7 @@ namespace Proyecto_Tienda__Diars_
         public presentacion()
         {
             InitializeComponent();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

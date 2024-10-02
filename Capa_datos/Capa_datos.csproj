@@ -42,9 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="datCargo.cs" />
     <Compile Include="datCategoria.cs" />
     <Compile Include="datCliente.cs" />
     <Compile Include="datColor.cs" />
+    <Compile Include="datEmpleado.cs" />
     <Compile Include="datLogin.cs" />
     <Compile Include="datMarca.cs" />
     <Compile Include="datProducto.cs" />

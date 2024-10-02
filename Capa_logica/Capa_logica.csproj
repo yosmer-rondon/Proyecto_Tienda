@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="logCargo.cs" />
     <Compile Include="logCategoria.cs" />
     <Compile Include="logCliente.cs" />
     <Compile Include="logColor.cs" />
+    <Compile Include="logEmpleado.cs" />
     <Compile Include="logLogin.cs" />
     <Compile Include="logMarca.cs" />
     <Compile Include="logProducto.cs" />

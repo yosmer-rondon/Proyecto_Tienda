@@ -24,6 +24,28 @@ namespace Proyecto_Tienda__Diars_
             llenarcomboxmarca();
             llenarcomboxtipoproducto();
             txtidproducto.Enabled = false;
+            cargarcargos();
+        }
+
+        public void cargarcargos() {
+            try
+            {
+                txtcargoempleado.DataSource = logCargo.Instancia.ListarCargo();
+                txtcargoempleado.DisplayMember = "Nombre";
+                //txtcargoempleado.ValueMember = "id_Cargo";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los cargos: " + ex.Message);
+            }
+        }
+        public void listarEmpleados()
+        {
+            dgvempleados.DataSource = logEmpleado.Instancia.ListarEmpleados();
+        }
+        public void MostrarCargos()
+        {
+            dgvcargo.DataSource = logCargo.Instancia.ListarCargo();
         }
         public void listarClientes()
         {
@@ -533,6 +555,125 @@ namespace Proyecto_Tienda__Diars_
                 txttelefonocliente.Text = row.Cells["Telefono"].Value.ToString();
                 txtcorreocliente.Text = row.Cells["Estado"].Value.ToString();
                 cbtestadocliente.Checked = Convert.ToBoolean(row.Cells["Estado"].Value);
+            }
+        }
+
+        private void btnagregarcargo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCargo cargo = new entCargo();
+                cargo.Nombre = txtnombrecargo.Text.Trim();
+                logCargo.Instancia.InsertarCargo(cargo);
+                MostrarCargos();
+                cargarcargos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btneliminarcargo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id_Cargo = Convert.ToInt32(txtidcargo.Text.Trim());
+                logCargo.Instancia.EliminarCargo(id_Cargo);
+                MessageBox.Show("Cargo eliminado correctamente");
+                MostrarCargos();
+                cargarcargos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btnmodificarcargo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCargo cargo = new entCargo();
+                cargo.id_Cargo = Convert.ToInt32(txtidcargo.Text.Trim());
+                cargo.Nombre = txtnombrecargo.Text.Trim();
+                logCargo.Instancia.ModificarCargo(cargo);
+                MessageBox.Show("Cargo modificado correctamente");
+                MostrarCargos();
+                cargarcargos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btnmostrarcargo_Click(object sender, EventArgs e)
+        {
+            MostrarCargos();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entEmpleado emp = new entEmpleado();
+                emp.Nombre = txtnombreempleado.Text.Trim();
+                emp.Apellidos = txtapellidoempleado.Text.Trim();
+                emp.DNI = Convert.ToInt32(txtdniempleado.Text.Trim());
+                emp.Telefono = Convert.ToInt32(txttelefonoempleado.Text.Trim());
+                emp.Correo = txtcorreoempleado.Text.Trim();
+                emp.NombreCargo = txtcargoempleado.SelectedItem.ToString();
+                emp.Estado = cbestadoempleado.Checked;
+
+                logEmpleado.Instancia.InsertarEmpleado(emp);
+                listarEmpleados();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar el empleado: " + ex.Message);
+            }
+        }
+
+        private void btnmostrarempleado_Click(object sender, EventArgs e)
+        {
+            listarEmpleados();
+        }
+
+        private void btnmodifiarempleado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entEmpleado emp = new entEmpleado();
+                emp.ID_Empleado = Convert.ToInt32(txtidempleado.Text.Trim());
+                emp.Nombre = txtnombreempleado.Text.Trim();
+                emp.Apellidos = txtapellidoempleado.Text.Trim();
+                emp.DNI = Convert.ToInt32(txtdniempleado.Text.Trim());
+                emp.Telefono = Convert.ToInt32(txttelefonoempleado.Text.Trim());
+                emp.Correo = txtcorreoempleado.Text.Trim();
+                emp.NombreCargo = txtcargoempleado.SelectedItem.ToString();
+                emp.Estado = cbestadoempleado.Checked;
+
+                logEmpleado.Instancia.ModificarEmpleado(emp);
+                listarEmpleados();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el empleado: " + ex.Message);
+            }
+        }
+
+        private void btneliminarempleado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idEmpleado = Convert.ToInt32(txtidempleado.Text.Trim());
+                logEmpleado.Instancia.EliminarEmpleado(idEmpleado);
+                listarEmpleados();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el empleado: " + ex.Message);
             }
         }
     }

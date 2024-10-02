@@ -136,26 +136,26 @@
             this.Empleado = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.Empleados = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnmodifiarempleado = new System.Windows.Forms.Button();
+            this.btneliminarempleado = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnmostrarempleado = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cbestadoempleado = new System.Windows.Forms.CheckBox();
+            this.txtcargoempleado = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.labelas = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtcorreoempleado = new System.Windows.Forms.TextBox();
+            this.txttelefonoempleado = new System.Windows.Forms.TextBox();
+            this.txtdniempleado = new System.Windows.Forms.TextBox();
+            this.txtapellidoempleado = new System.Windows.Forms.TextBox();
+            this.txtnombreempleado = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvempleados = new System.Windows.Forms.DataGridView();
             this.Cargo = new System.Windows.Forms.TabPage();
             this.txtidcargo = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -166,7 +166,7 @@
             this.btnbuscarcago = new System.Windows.Forms.Button();
             this.btnmostrarcargo = new System.Windows.Forms.Button();
             this.btnagregarcargo = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvcargo = new System.Windows.Forms.DataGridView();
             this.Pedidos = new System.Windows.Forms.TabPage();
             this.Ventas = new System.Windows.Forms.TabPage();
             this.button6 = new System.Windows.Forms.Button();
@@ -209,6 +209,8 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.txtidempleado = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
             this.tapcontrol.SuspendLayout();
             this.Cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
@@ -229,9 +231,9 @@
             this.Empleado.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.Empleados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvempleados)).BeginInit();
             this.Cargo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcargo)).BeginInit();
             this.Pedidos.SuspendLayout();
             this.Ventas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -240,6 +242,9 @@
             // 
             // tapcontrol
             // 
+            this.tapcontrol.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tapcontrol.Controls.Add(this.Cliente);
             this.tapcontrol.Controls.Add(this.Producto);
             this.tapcontrol.Controls.Add(this.Empleado);
@@ -467,6 +472,9 @@
             // 
             // Productos
             // 
+            this.Productos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Productos.Controls.Add(this.tabPage3);
             this.Productos.Controls.Add(this.tabPage4);
             this.Productos.Controls.Add(this.tabPage5);
@@ -516,6 +524,7 @@
             // 
             // txtidproducto
             // 
+            this.txtidproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtidproducto.Location = new System.Drawing.Point(153, 18);
             this.txtidproducto.Name = "txtidproducto";
             this.txtidproducto.Size = new System.Drawing.Size(203, 34);
@@ -523,6 +532,7 @@
             // 
             // label31
             // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(24, 25);
             this.label31.Name = "label31";
@@ -532,6 +542,7 @@
             // 
             // cbtipoproducto
             // 
+            this.cbtipoproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbtipoproducto.FormattingEnabled = true;
             this.cbtipoproducto.Location = new System.Drawing.Point(745, 294);
             this.cbtipoproducto.Name = "cbtipoproducto";
@@ -540,6 +551,7 @@
             // 
             // cbmarca
             // 
+            this.cbmarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbmarca.FormattingEnabled = true;
             this.cbmarca.Location = new System.Drawing.Point(666, 71);
             this.cbmarca.Name = "cbmarca";
@@ -548,6 +560,7 @@
             // 
             // cbcategoria
             // 
+            this.cbcategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbcategoria.FormattingEnabled = true;
             this.cbcategoria.Location = new System.Drawing.Point(139, 294);
             this.cbcategoria.Name = "cbcategoria";
@@ -556,6 +569,7 @@
             // 
             // cbcolor
             // 
+            this.cbcolor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbcolor.FormattingEnabled = true;
             this.cbcolor.Location = new System.Drawing.Point(125, 215);
             this.cbcolor.Name = "cbcolor";
@@ -564,6 +578,7 @@
             // 
             // cbtalla
             // 
+            this.cbtalla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbtalla.FormattingEnabled = true;
             this.cbtalla.Location = new System.Drawing.Point(125, 144);
             this.cbtalla.Name = "cbtalla";
@@ -572,6 +587,7 @@
             // 
             // txtprecioproducto
             // 
+            this.txtprecioproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtprecioproducto.Location = new System.Drawing.Point(665, 145);
             this.txtprecioproducto.Name = "txtprecioproducto";
             this.txtprecioproducto.Size = new System.Drawing.Size(231, 34);
@@ -579,6 +595,7 @@
             // 
             // txtstockproducto
             // 
+            this.txtstockproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtstockproducto.Location = new System.Drawing.Point(665, 216);
             this.txtstockproducto.Name = "txtstockproducto";
             this.txtstockproducto.Size = new System.Drawing.Size(231, 34);
@@ -586,6 +603,7 @@
             // 
             // txtnombreproducto
             // 
+            this.txtnombreproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtnombreproducto.Location = new System.Drawing.Point(125, 72);
             this.txtnombreproducto.Name = "txtnombreproducto";
             this.txtnombreproducto.Size = new System.Drawing.Size(231, 34);
@@ -593,6 +611,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(24, 302);
             this.label8.Name = "label8";
@@ -602,6 +621,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(24, 223);
             this.label7.Name = "label7";
@@ -611,6 +631,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(24, 152);
             this.label6.Name = "label6";
@@ -620,6 +641,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(585, 79);
             this.label5.Name = "label5";
@@ -629,6 +651,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(585, 302);
             this.label4.Name = "label4";
@@ -638,6 +661,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(585, 223);
             this.label3.Name = "label3";
@@ -647,6 +671,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(585, 152);
             this.label2.Name = "label2";
@@ -656,6 +681,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(24, 79);
             this.label1.Name = "label1";
@@ -665,6 +691,7 @@
             // 
             // btnmodificarproducto
             // 
+            this.btnmodificarproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnmodificarproducto.BackColor = System.Drawing.Color.PaleGreen;
             this.btnmodificarproducto.Location = new System.Drawing.Point(505, 379);
             this.btnmodificarproducto.Name = "btnmodificarproducto";
@@ -675,6 +702,7 @@
             // 
             // btneliminarproducto
             // 
+            this.btneliminarproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btneliminarproducto.BackColor = System.Drawing.Color.Orange;
             this.btneliminarproducto.Location = new System.Drawing.Point(384, 379);
             this.btneliminarproducto.Name = "btneliminarproducto";
@@ -686,6 +714,7 @@
             // 
             // btnbuscarproducto
             // 
+            this.btnbuscarproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnbuscarproducto.BackColor = System.Drawing.Color.PaleGreen;
             this.btnbuscarproducto.Location = new System.Drawing.Point(259, 379);
             this.btnbuscarproducto.Name = "btnbuscarproducto";
@@ -696,6 +725,7 @@
             // 
             // btnmostrarproducto
             // 
+            this.btnmostrarproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnmostrarproducto.BackColor = System.Drawing.Color.PaleGreen;
             this.btnmostrarproducto.Location = new System.Drawing.Point(136, 379);
             this.btnmostrarproducto.Name = "btnmostrarproducto";
@@ -707,6 +737,7 @@
             // 
             // btnagregarproducto
             // 
+            this.btnagregarproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnagregarproducto.BackColor = System.Drawing.Color.PaleGreen;
             this.btnagregarproducto.Location = new System.Drawing.Point(13, 379);
             this.btnagregarproducto.Name = "btnagregarproducto";
@@ -718,6 +749,7 @@
             // 
             // dgvproducto
             // 
+            this.dgvproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvproducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvproducto.BackgroundColor = System.Drawing.Color.SkyBlue;
             this.dgvproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1356,26 +1388,28 @@
             // Empleados
             // 
             this.Empleados.BackColor = System.Drawing.Color.SkyBlue;
-            this.Empleados.Controls.Add(this.button1);
-            this.Empleados.Controls.Add(this.button2);
+            this.Empleados.Controls.Add(this.txtidempleado);
+            this.Empleados.Controls.Add(this.label49);
+            this.Empleados.Controls.Add(this.btnmodifiarempleado);
+            this.Empleados.Controls.Add(this.btneliminarempleado);
             this.Empleados.Controls.Add(this.button3);
-            this.Empleados.Controls.Add(this.button4);
+            this.Empleados.Controls.Add(this.btnmostrarempleado);
             this.Empleados.Controls.Add(this.button5);
-            this.Empleados.Controls.Add(this.checkBox1);
-            this.Empleados.Controls.Add(this.comboBox6);
+            this.Empleados.Controls.Add(this.cbestadoempleado);
+            this.Empleados.Controls.Add(this.txtcargoempleado);
             this.Empleados.Controls.Add(this.label20);
             this.Empleados.Controls.Add(this.labelas);
-            this.Empleados.Controls.Add(this.textBox9);
-            this.Empleados.Controls.Add(this.textBox10);
-            this.Empleados.Controls.Add(this.textBox11);
-            this.Empleados.Controls.Add(this.textBox12);
-            this.Empleados.Controls.Add(this.textBox13);
+            this.Empleados.Controls.Add(this.txtcorreoempleado);
+            this.Empleados.Controls.Add(this.txttelefonoempleado);
+            this.Empleados.Controls.Add(this.txtdniempleado);
+            this.Empleados.Controls.Add(this.txtapellidoempleado);
+            this.Empleados.Controls.Add(this.txtnombreempleado);
             this.Empleados.Controls.Add(this.label13);
             this.Empleados.Controls.Add(this.label14);
             this.Empleados.Controls.Add(this.label15);
             this.Empleados.Controls.Add(this.label17);
             this.Empleados.Controls.Add(this.label18);
-            this.Empleados.Controls.Add(this.dataGridView2);
+            this.Empleados.Controls.Add(this.dgvempleados);
             this.Empleados.Location = new System.Drawing.Point(4, 36);
             this.Empleados.Name = "Empleados";
             this.Empleados.Padding = new System.Windows.Forms.Padding(3);
@@ -1383,25 +1417,27 @@
             this.Empleados.TabIndex = 0;
             this.Empleados.Text = "Empleado";
             // 
-            // button1
+            // btnmodifiarempleado
             // 
-            this.button1.BackColor = System.Drawing.Color.PaleGreen;
-            this.button1.Location = new System.Drawing.Point(510, 354);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 45);
-            this.button1.TabIndex = 73;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnmodifiarempleado.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnmodifiarempleado.Location = new System.Drawing.Point(510, 354);
+            this.btnmodifiarempleado.Name = "btnmodifiarempleado";
+            this.btnmodifiarempleado.Size = new System.Drawing.Size(118, 45);
+            this.btnmodifiarempleado.TabIndex = 73;
+            this.btnmodifiarempleado.Text = "Modificar";
+            this.btnmodifiarempleado.UseVisualStyleBackColor = false;
+            this.btnmodifiarempleado.Click += new System.EventHandler(this.btnmodifiarempleado_Click);
             // 
-            // button2
+            // btneliminarempleado
             // 
-            this.button2.BackColor = System.Drawing.Color.Orange;
-            this.button2.Location = new System.Drawing.Point(389, 354);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 45);
-            this.button2.TabIndex = 72;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btneliminarempleado.BackColor = System.Drawing.Color.Orange;
+            this.btneliminarempleado.Location = new System.Drawing.Point(389, 354);
+            this.btneliminarempleado.Name = "btneliminarempleado";
+            this.btneliminarempleado.Size = new System.Drawing.Size(104, 45);
+            this.btneliminarempleado.TabIndex = 72;
+            this.btneliminarempleado.Text = "Eliminar";
+            this.btneliminarempleado.UseVisualStyleBackColor = false;
+            this.btneliminarempleado.Click += new System.EventHandler(this.btneliminarempleado_Click);
             // 
             // button3
             // 
@@ -1413,15 +1449,16 @@
             this.button3.Text = "Buscar";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnmostrarempleado
             // 
-            this.button4.BackColor = System.Drawing.Color.PaleGreen;
-            this.button4.Location = new System.Drawing.Point(141, 354);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 45);
-            this.button4.TabIndex = 70;
-            this.button4.Text = "Mostrar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnmostrarempleado.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnmostrarempleado.Location = new System.Drawing.Point(141, 354);
+            this.btnmostrarempleado.Name = "btnmostrarempleado";
+            this.btnmostrarempleado.Size = new System.Drawing.Size(104, 45);
+            this.btnmostrarempleado.TabIndex = 70;
+            this.btnmostrarempleado.Text = "Mostrar";
+            this.btnmostrarempleado.UseVisualStyleBackColor = false;
+            this.btnmostrarempleado.Click += new System.EventHandler(this.btnmostrarempleado_Click);
             // 
             // button5
             // 
@@ -1432,29 +1469,30 @@
             this.button5.TabIndex = 69;
             this.button5.Text = "Agregar";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // checkBox1
+            // cbestadoempleado
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(681, 167);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(95, 31);
-            this.checkBox1.TabIndex = 60;
-            this.checkBox1.Text = "Activo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbestadoempleado.AutoSize = true;
+            this.cbestadoempleado.Location = new System.Drawing.Point(681, 206);
+            this.cbestadoempleado.Name = "cbestadoempleado";
+            this.cbestadoempleado.Size = new System.Drawing.Size(95, 31);
+            this.cbestadoempleado.TabIndex = 60;
+            this.cbestadoempleado.Text = "Activo";
+            this.cbestadoempleado.UseVisualStyleBackColor = true;
             // 
-            // comboBox6
+            // txtcargoempleado
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(671, 104);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(231, 35);
-            this.comboBox6.TabIndex = 59;
+            this.txtcargoempleado.FormattingEnabled = true;
+            this.txtcargoempleado.Location = new System.Drawing.Point(671, 143);
+            this.txtcargoempleado.Name = "txtcargoempleado";
+            this.txtcargoempleado.Size = new System.Drawing.Size(231, 35);
+            this.txtcargoempleado.TabIndex = 59;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(586, 171);
+            this.label20.Location = new System.Drawing.Point(586, 210);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(79, 27);
             this.label20.TabIndex = 58;
@@ -1463,51 +1501,51 @@
             // labelas
             // 
             this.labelas.AutoSize = true;
-            this.labelas.Location = new System.Drawing.Point(586, 104);
+            this.labelas.Location = new System.Drawing.Point(586, 143);
             this.labelas.Name = "labelas";
             this.labelas.Size = new System.Drawing.Size(71, 27);
             this.labelas.TabIndex = 57;
             this.labelas.Text = "Cargo";
             // 
-            // textBox9
+            // txtcorreoempleado
             // 
-            this.textBox9.Location = new System.Drawing.Point(671, 24);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(231, 34);
-            this.textBox9.TabIndex = 56;
+            this.txtcorreoempleado.Location = new System.Drawing.Point(671, 63);
+            this.txtcorreoempleado.Name = "txtcorreoempleado";
+            this.txtcorreoempleado.Size = new System.Drawing.Size(231, 34);
+            this.txtcorreoempleado.TabIndex = 56;
             // 
-            // textBox10
+            // txttelefonoempleado
             // 
-            this.textBox10.Location = new System.Drawing.Point(137, 247);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(231, 34);
-            this.textBox10.TabIndex = 55;
+            this.txttelefonoempleado.Location = new System.Drawing.Point(137, 286);
+            this.txttelefonoempleado.Name = "txttelefonoempleado";
+            this.txttelefonoempleado.Size = new System.Drawing.Size(231, 34);
+            this.txttelefonoempleado.TabIndex = 55;
             // 
-            // textBox11
+            // txtdniempleado
             // 
-            this.textBox11.Location = new System.Drawing.Point(137, 168);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(231, 34);
-            this.textBox11.TabIndex = 54;
+            this.txtdniempleado.Location = new System.Drawing.Point(137, 207);
+            this.txtdniempleado.Name = "txtdniempleado";
+            this.txtdniempleado.Size = new System.Drawing.Size(231, 34);
+            this.txtdniempleado.TabIndex = 54;
             // 
-            // textBox12
+            // txtapellidoempleado
             // 
-            this.textBox12.Location = new System.Drawing.Point(137, 97);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(231, 34);
-            this.textBox12.TabIndex = 53;
+            this.txtapellidoempleado.Location = new System.Drawing.Point(137, 136);
+            this.txtapellidoempleado.Name = "txtapellidoempleado";
+            this.txtapellidoempleado.Size = new System.Drawing.Size(231, 34);
+            this.txtapellidoempleado.TabIndex = 53;
             // 
-            // textBox13
+            // txtnombreempleado
             // 
-            this.textBox13.Location = new System.Drawing.Point(126, 24);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(231, 34);
-            this.textBox13.TabIndex = 52;
+            this.txtnombreempleado.Location = new System.Drawing.Point(126, 63);
+            this.txtnombreempleado.Name = "txtnombreempleado";
+            this.txtnombreempleado.Size = new System.Drawing.Size(231, 34);
+            this.txtnombreempleado.TabIndex = 52;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(25, 254);
+            this.label13.Location = new System.Drawing.Point(25, 293);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 27);
             this.label13.TabIndex = 51;
@@ -1516,7 +1554,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(25, 175);
+            this.label14.Location = new System.Drawing.Point(25, 214);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(52, 27);
             this.label14.TabIndex = 50;
@@ -1525,7 +1563,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(25, 104);
+            this.label15.Location = new System.Drawing.Point(25, 143);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(106, 27);
             this.label15.TabIndex = 49;
@@ -1534,7 +1572,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(586, 31);
+            this.label17.Location = new System.Drawing.Point(586, 70);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(79, 27);
             this.label17.TabIndex = 48;
@@ -1543,22 +1581,22 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(25, 31);
+            this.label18.Location = new System.Drawing.Point(25, 70);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(95, 27);
             this.label18.TabIndex = 47;
             this.label18.Text = "Nombre";
             // 
-            // dataGridView2
+            // dgvempleados
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(7, 415);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(1320, 309);
-            this.dataGridView2.TabIndex = 41;
+            this.dgvempleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvempleados.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgvempleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvempleados.Location = new System.Drawing.Point(7, 415);
+            this.dgvempleados.Name = "dgvempleados";
+            this.dgvempleados.ReadOnly = true;
+            this.dgvempleados.Size = new System.Drawing.Size(1320, 309);
+            this.dgvempleados.TabIndex = 41;
             // 
             // Cargo
             // 
@@ -1572,7 +1610,7 @@
             this.Cargo.Controls.Add(this.btnbuscarcago);
             this.Cargo.Controls.Add(this.btnmostrarcargo);
             this.Cargo.Controls.Add(this.btnagregarcargo);
-            this.Cargo.Controls.Add(this.dataGridView3);
+            this.Cargo.Controls.Add(this.dgvcargo);
             this.Cargo.Location = new System.Drawing.Point(4, 36);
             this.Cargo.Name = "Cargo";
             this.Cargo.Padding = new System.Windows.Forms.Padding(3);
@@ -1621,6 +1659,7 @@
             this.btnmodificarcargo.TabIndex = 68;
             this.btnmodificarcargo.Text = "Modificar";
             this.btnmodificarcargo.UseVisualStyleBackColor = false;
+            this.btnmodificarcargo.Click += new System.EventHandler(this.btnmodificarcargo_Click);
             // 
             // btneliminarcargo
             // 
@@ -1631,6 +1670,7 @@
             this.btneliminarcargo.TabIndex = 67;
             this.btneliminarcargo.Text = "Eliminar";
             this.btneliminarcargo.UseVisualStyleBackColor = false;
+            this.btneliminarcargo.Click += new System.EventHandler(this.btneliminarcargo_Click);
             // 
             // btnbuscarcago
             // 
@@ -1651,6 +1691,7 @@
             this.btnmostrarcargo.TabIndex = 65;
             this.btnmostrarcargo.Text = "Mostrar";
             this.btnmostrarcargo.UseVisualStyleBackColor = false;
+            this.btnmostrarcargo.Click += new System.EventHandler(this.btnmostrarcargo_Click);
             // 
             // btnagregarcargo
             // 
@@ -1661,17 +1702,18 @@
             this.btnagregarcargo.TabIndex = 64;
             this.btnagregarcargo.Text = "Agregar";
             this.btnagregarcargo.UseVisualStyleBackColor = false;
+            this.btnagregarcargo.Click += new System.EventHandler(this.btnagregarcargo_Click);
             // 
-            // dataGridView3
+            // dgvcargo
             // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(7, 412);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(1320, 309);
-            this.dataGridView3.TabIndex = 63;
+            this.dgvcargo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvcargo.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgvcargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvcargo.Location = new System.Drawing.Point(7, 412);
+            this.dgvcargo.Name = "dgvcargo";
+            this.dgvcargo.ReadOnly = true;
+            this.dgvcargo.Size = new System.Drawing.Size(1320, 309);
+            this.dgvcargo.TabIndex = 63;
             // 
             // Pedidos
             // 
@@ -2086,6 +2128,22 @@
             this.dataGridView4.Size = new System.Drawing.Size(1320, 309);
             this.dataGridView4.TabIndex = 74;
             // 
+            // txtidempleado
+            // 
+            this.txtidempleado.Location = new System.Drawing.Point(168, 6);
+            this.txtidempleado.Name = "txtidempleado";
+            this.txtidempleado.Size = new System.Drawing.Size(189, 34);
+            this.txtidempleado.TabIndex = 75;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(25, 13);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(137, 27);
+            this.label49.TabIndex = 74;
+            this.label49.Text = "id Empleado";
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2125,10 +2183,10 @@
             this.tabControl2.ResumeLayout(false);
             this.Empleados.ResumeLayout(false);
             this.Empleados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvempleados)).EndInit();
             this.Cargo.ResumeLayout(false);
             this.Cargo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcargo)).EndInit();
             this.Pedidos.ResumeLayout(false);
             this.Pedidos.PerformLayout();
             this.Ventas.ResumeLayout(false);
@@ -2152,21 +2210,21 @@
         private System.Windows.Forms.TabPage Empleado;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage Empleados;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.CheckBox cbestadoempleado;
+        private System.Windows.Forms.ComboBox txtcargoempleado;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label labelas;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtcorreoempleado;
+        private System.Windows.Forms.TextBox txttelefonoempleado;
+        private System.Windows.Forms.TextBox txtdniempleado;
+        private System.Windows.Forms.TextBox txtapellidoempleado;
+        private System.Windows.Forms.TextBox txtnombreempleado;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvempleados;
         private System.Windows.Forms.TabPage Cargo;
         private System.Windows.Forms.TabPage Pedidos;
         private System.Windows.Forms.TabPage Ventas;
@@ -2222,10 +2280,10 @@
         private System.Windows.Forms.Button mostrarcategoria;
         private System.Windows.Forms.Button agregarcategoria;
         private System.Windows.Forms.DataGridView dgvcategoria;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnmodifiarempleado;
+        private System.Windows.Forms.Button btneliminarempleado;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnmostrarempleado;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtidcargo;
         private System.Windows.Forms.Label label32;
@@ -2236,7 +2294,7 @@
         private System.Windows.Forms.Button btnbuscarcago;
         private System.Windows.Forms.Button btnmostrarcargo;
         private System.Windows.Forms.Button btnagregarcargo;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvcargo;
         private System.Windows.Forms.TabPage Cliente;
         private System.Windows.Forms.TextBox txtidcliente;
         private System.Windows.Forms.Label label34;
@@ -2322,5 +2380,7 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.TextBox txtidempleado;
+        private System.Windows.Forms.Label label49;
     }
 }
