@@ -126,7 +126,7 @@ namespace Capa_datos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("ListarEmpleados", cn);
+                cmd = new SqlCommand("MostrarEmpleados", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cn.Open();
@@ -140,7 +140,7 @@ namespace Capa_datos
                     emp.DNI = Convert.ToInt32(dr["DNI"]);
                     emp.Telefono = Convert.ToInt32(dr["Telefono"]);
                     emp.Correo = dr["Correo"].ToString();
-                    emp.id_Cargo = Convert.ToInt32(dr["id_Cargo"]);
+                    emp.id_Cargo = Convert.ToInt32(dr["id_cargo"]);
                     emp.Estado = Convert.ToBoolean(dr["Estado"]);
                     lista.Add(emp);
                 }

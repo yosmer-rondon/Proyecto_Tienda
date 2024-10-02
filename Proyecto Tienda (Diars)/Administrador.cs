@@ -623,7 +623,7 @@ namespace Proyecto_Tienda__Diars_
                 emp.DNI = Convert.ToInt32(txtdniempleado.Text.Trim());
                 emp.Telefono = Convert.ToInt32(txttelefonoempleado.Text.Trim());
                 emp.Correo = txtcorreoempleado.Text.Trim();
-                emp.NombreCargo = txtcargoempleado.SelectedItem.ToString();
+                emp.NombreCargo = txtcargoempleado.Text.Trim();
                 emp.Estado = cbestadoempleado.Checked;
 
                 logEmpleado.Instancia.InsertarEmpleado(emp);
@@ -651,7 +651,7 @@ namespace Proyecto_Tienda__Diars_
                 emp.DNI = Convert.ToInt32(txtdniempleado.Text.Trim());
                 emp.Telefono = Convert.ToInt32(txttelefonoempleado.Text.Trim());
                 emp.Correo = txtcorreoempleado.Text.Trim();
-                emp.NombreCargo = txtcargoempleado.SelectedItem.ToString();
+                emp.NombreCargo = txtcargoempleado.Text.Trim();
                 emp.Estado = cbestadoempleado.Checked;
 
                 logEmpleado.Instancia.ModificarEmpleado(emp);
