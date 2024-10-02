@@ -14,6 +14,8 @@ namespace Capa_entidad
         public int DNI { get; set; }
         public int Telefono { get; set; }
         public string Correo { get; set; }
+        public string NombreCargo { get; set; }
+        public bool Estado { get; set; }
         public int id_Cargo { get; set; }
         public bool Estado { get; set; }
         public string NombreCargo { get; set; }
