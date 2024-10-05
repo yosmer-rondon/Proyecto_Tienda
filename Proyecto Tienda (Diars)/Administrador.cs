@@ -676,5 +676,15 @@ namespace Proyecto_Tienda__Diars_
                 MessageBox.Show("Error al eliminar el empleado: " + ex.Message);
             }
         }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            listarproducto();
+        }
+
+        private void textBox29_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
