@@ -1,5 +1,6 @@
 ﻿using Capa_entidad;
 using Capa_logica;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +17,7 @@ namespace Proyecto_Tienda__Diars_
 {
     public partial class Administrador : Form
     {
+        api apisperu = new api();
         public Administrador()
         {
             InitializeComponent();
@@ -26,8 +29,9 @@ namespace Proyecto_Tienda__Diars_
             txtidproducto.Enabled = false;
             cargarcargos();
         }
-
-        public void cargarcargos() {
+       
+        public void cargarcargos()
+        {
             try
             {
                 txtcargoempleado.DataSource = logCargo.Instancia.ListarCargo();
@@ -263,21 +267,21 @@ namespace Proyecto_Tienda__Diars_
 
         private void eliminarcolor_Click(object sender, EventArgs e)
         {
-            
-                try
-                {
-                    entColor c = new entColor();
 
-                    c.id_Color = int.Parse(txtidcolor.Text.Trim());
-                    logColor.Instancia.EliminarColor(c);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error.." + ex);
-                }
-                //LimpiarVariables();
-                listarcolor();
-            
+            try
+            {
+                entColor c = new entColor();
+
+                c.id_Color = int.Parse(txtidcolor.Text.Trim());
+                logColor.Instancia.EliminarColor(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            //LimpiarVariables();
+            listarcolor();
+
         }
 
         private void button26_Click(object sender, EventArgs e)
@@ -409,7 +413,7 @@ namespace Proyecto_Tienda__Diars_
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            listarClientes(); 
+            listarClientes();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -527,8 +531,8 @@ namespace Proyecto_Tienda__Diars_
         {
             try
             {
-                    logCliente.Instancia.EliminarCliente(Convert.ToInt32(txtidcliente.Text));
-                    MessageBox.Show("Cliente eliminado correctamente.");
+                logCliente.Instancia.EliminarCliente(Convert.ToInt32(txtidcliente.Text));
+                MessageBox.Show("Cliente eliminado correctamente.");
             }
             catch (Exception ex)
             {
@@ -553,7 +557,6 @@ namespace Proyecto_Tienda__Diars_
                 txtapellidoscliente.Text = row.Cells["Apellido"].Value.ToString();
                 txtdnicliente.Text = row.Cells["Dni"].Value.ToString();
                 txttelefonocliente.Text = row.Cells["Telefono"].Value.ToString();
-                txtcorreocliente.Text = row.Cells["Estado"].Value.ToString();
                 cbtestadocliente.Checked = Convert.ToBoolean(row.Cells["Estado"].Value);
             }
         }
@@ -685,6 +688,31 @@ namespace Proyecto_Tienda__Diars_
         private void textBox29_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private async void consultarcliente_Click(object sender, EventArgs e)
+        {
+            string dni = txtdnicliente.Text.Trim();
+            api apiCliente = new api();
+
+            try
+            {
+                api cliente = await apiCliente.ObtenerDatosClienteAsync(dni);
+                txtnombrecliente.Text = cliente.Nombre;
+                txtapellidoscliente.Text = $"{cliente.Apellidos}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+        private void txtdnicliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -69,10 +69,12 @@
             this.txtDNI.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.Location = new System.Drawing.Point(93, 386);
+            this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(298, 38);
             this.txtDNI.TabIndex = 2;
             this.txtDNI.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // txtcontraseña
             // 
