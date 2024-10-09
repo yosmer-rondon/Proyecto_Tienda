@@ -66,6 +66,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Pedido = new System.Windows.Forms.TabPage();
             this.Pago_ = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.Pago.SuspendLayout();
             this.Venta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numcantidadproducto)).BeginInit();
@@ -91,6 +92,7 @@
             // 
             // Venta
             // 
+            this.Venta.Controls.Add(this.button5);
             this.Venta.Controls.Add(this.txtvuelto1);
             this.Venta.Controls.Add(this.txt_a);
             this.Venta.Controls.Add(this.txtmontorecibido);
@@ -131,7 +133,7 @@
             // txtvuelto1
             // 
             this.txtvuelto1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtvuelto1.Location = new System.Drawing.Point(550, 273);
+            this.txtvuelto1.Location = new System.Drawing.Point(179, 612);
             this.txtvuelto1.Name = "txtvuelto1";
             this.txtvuelto1.Size = new System.Drawing.Size(132, 29);
             this.txtvuelto1.TabIndex = 49;
@@ -140,7 +142,7 @@
             // 
             this.txt_a.AutoSize = true;
             this.txt_a.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_a.Location = new System.Drawing.Point(385, 280);
+            this.txt_a.Location = new System.Drawing.Point(14, 619);
             this.txt_a.Name = "txt_a";
             this.txt_a.Size = new System.Drawing.Size(63, 22);
             this.txt_a.TabIndex = 48;
@@ -149,7 +151,7 @@
             // txtmontorecibido
             // 
             this.txtmontorecibido.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmontorecibido.Location = new System.Drawing.Point(550, 222);
+            this.txtmontorecibido.Location = new System.Drawing.Point(179, 561);
             this.txtmontorecibido.Name = "txtmontorecibido";
             this.txtmontorecibido.Size = new System.Drawing.Size(132, 29);
             this.txtmontorecibido.TabIndex = 47;
@@ -159,7 +161,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(385, 229);
+            this.label9.Location = new System.Drawing.Point(14, 568);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(141, 22);
             this.label9.TabIndex = 46;
@@ -168,7 +170,7 @@
             // txttotalventa
             // 
             this.txttotalventa.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalventa.Location = new System.Drawing.Point(550, 170);
+            this.txttotalventa.Location = new System.Drawing.Point(179, 509);
             this.txttotalventa.Name = "txttotalventa";
             this.txttotalventa.Size = new System.Drawing.Size(132, 29);
             this.txttotalventa.TabIndex = 45;
@@ -177,7 +179,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(381, 177);
+            this.label10.Location = new System.Drawing.Point(10, 516);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 22);
             this.label10.TabIndex = 44;
@@ -185,7 +187,7 @@
             // 
             // numcantidadproducto
             // 
-            this.numcantidadproducto.Location = new System.Drawing.Point(188, 280);
+            this.numcantidadproducto.Location = new System.Drawing.Point(1257, 67);
             this.numcantidadproducto.Name = "numcantidadproducto";
             this.numcantidadproducto.Size = new System.Drawing.Size(71, 34);
             this.numcantidadproducto.TabIndex = 43;
@@ -205,18 +207,19 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.LimeGreen;
             this.button7.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(389, 422);
+            this.button7.Location = new System.Drawing.Point(1228, 502);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(178, 36);
+            this.button7.Size = new System.Drawing.Size(100, 36);
             this.button7.TabIndex = 41;
-            this.button7.Text = "Finalizar venta";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Text = "💵 pagar";
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // btnAgregarproducto
             // 
             this.btnAgregarproducto.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarproducto.Location = new System.Drawing.Point(174, 422);
+            this.btnAgregarproducto.Location = new System.Drawing.Point(907, 123);
             this.btnAgregarproducto.Name = "btnAgregarproducto";
             this.btnAgregarproducto.Size = new System.Drawing.Size(205, 36);
             this.btnAgregarproducto.TabIndex = 40;
@@ -228,9 +231,9 @@
             // 
             this.groupBox3.Controls.Add(this.dbvdetalleventa);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(17, 464);
+            this.groupBox3.Location = new System.Drawing.Point(14, 165);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(550, 314);
+            this.groupBox3.Size = new System.Drawing.Size(646, 334);
             this.groupBox3.TabIndex = 39;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalle de venta";
@@ -242,13 +245,13 @@
             this.dbvdetalleventa.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dbvdetalleventa.Location = new System.Drawing.Point(3, 21);
             this.dbvdetalleventa.Name = "dbvdetalleventa";
-            this.dbvdetalleventa.Size = new System.Drawing.Size(544, 290);
+            this.dbvdetalleventa.Size = new System.Drawing.Size(640, 310);
             this.dbvdetalleventa.TabIndex = 10;
             // 
             // txtsubtotaldetalle
             // 
             this.txtsubtotaldetalle.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsubtotaldetalle.Location = new System.Drawing.Point(188, 379);
+            this.txtsubtotaldetalle.Location = new System.Drawing.Point(1096, 72);
             this.txtsubtotaldetalle.Name = "txtsubtotaldetalle";
             this.txtsubtotaldetalle.Size = new System.Drawing.Size(132, 29);
             this.txtsubtotaldetalle.TabIndex = 38;
@@ -257,7 +260,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 386);
+            this.label7.Location = new System.Drawing.Point(960, 79);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 22);
             this.label7.TabIndex = 37;
@@ -266,7 +269,7 @@
             // txtprecioproducto
             // 
             this.txtprecioproducto.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprecioproducto.Location = new System.Drawing.Point(188, 327);
+            this.txtprecioproducto.Location = new System.Drawing.Point(1096, 28);
             this.txtprecioproducto.Name = "txtprecioproducto";
             this.txtprecioproducto.Size = new System.Drawing.Size(132, 29);
             this.txtprecioproducto.TabIndex = 36;
@@ -275,7 +278,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 334);
+            this.label6.Location = new System.Drawing.Point(960, 35);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 22);
             this.label6.TabIndex = 35;
@@ -285,7 +288,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 280);
+            this.label5.Location = new System.Drawing.Point(1253, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 22);
             this.label5.TabIndex = 33;
@@ -294,7 +297,7 @@
             // txtidproducto
             // 
             this.txtidproducto.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidproducto.Location = new System.Drawing.Point(188, 229);
+            this.txtidproducto.Location = new System.Drawing.Point(816, 76);
             this.txtidproducto.Name = "txtidproducto";
             this.txtidproducto.Size = new System.Drawing.Size(132, 29);
             this.txtidproducto.TabIndex = 32;
@@ -303,7 +306,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 229);
+            this.label4.Location = new System.Drawing.Point(680, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 22);
             this.label4.TabIndex = 31;
@@ -312,7 +315,7 @@
             // txtventa
             // 
             this.txtventa.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtventa.Location = new System.Drawing.Point(188, 177);
+            this.txtventa.Location = new System.Drawing.Point(816, 31);
             this.txtventa.Name = "txtventa";
             this.txtventa.Size = new System.Drawing.Size(132, 29);
             this.txtventa.TabIndex = 30;
@@ -321,7 +324,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 180);
+            this.label3.Location = new System.Drawing.Point(680, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 22);
             this.label3.TabIndex = 29;
@@ -333,9 +336,9 @@
             this.groupBox2.Controls.Add(this.dgvproducto);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(704, 485);
+            this.groupBox2.Location = new System.Drawing.Point(684, 162);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(667, 325);
+            this.groupBox2.Size = new System.Drawing.Size(652, 334);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mostra producto";
@@ -355,7 +358,7 @@
             this.dgvproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvproducto.Location = new System.Drawing.Point(6, 114);
             this.dgvproducto.Name = "dgvproducto";
-            this.dgvproducto.Size = new System.Drawing.Size(644, 194);
+            this.dgvproducto.Size = new System.Drawing.Size(638, 213);
             this.dgvproducto.TabIndex = 9;
             this.dgvproducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproducto_CellClick);
             // 
@@ -364,7 +367,7 @@
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.txtbuscarproducto);
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Location = new System.Drawing.Point(6, 21);
+            this.groupBox1.Location = new System.Drawing.Point(6, 18);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(217, 79);
             this.groupBox1.TabIndex = 8;
@@ -400,9 +403,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(106, 128);
+            this.button2.Location = new System.Drawing.Point(138, 123);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(273, 36);
+            this.button2.Size = new System.Drawing.Size(241, 36);
             this.button2.TabIndex = 27;
             this.button2.Text = "Genera orden de compra ";
             this.button2.UseVisualStyleBackColor = true;
@@ -411,9 +414,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(385, 39);
+            this.button1.Location = new System.Drawing.Point(397, 37);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 36);
+            this.button1.Size = new System.Drawing.Size(123, 31);
             this.button1.TabIndex = 23;
             this.button1.Text = "Verificar";
             this.button1.UseVisualStyleBackColor = true;
@@ -479,6 +482,17 @@
             this.Pago_.Text = "   💰Pago   ";
             this.Pago_.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Tomato;
+            this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(1122, 502);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 36);
+            this.button5.TabIndex = 50;
+            this.button5.Text = "❌ Anular";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,5 +556,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtvuelto1;
         private System.Windows.Forms.Label txt_a;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -120,11 +120,6 @@ namespace Proyecto_Tienda__Diars_
         private void button5_Click_1(object sender, EventArgs e)
         {
             dgvproducto.DataSource = logProducto.Instancia.ListarProducto();
-            dgvproducto.Columns["NombreTipoProducto"].Visible = false;
-            dgvproducto.Columns["NombreMarca"].Visible = false;
-            dgvproducto.Columns["NombreTalla"].Visible = false;
-            dgvproducto.Columns["NombreColor"].Visible = false;
-            dgvproducto.Columns["NombreCategoria"].Visible = false;
         }
 
         private void dgvproducto_CellClick(object sender, DataGridViewCellEventArgs e)
