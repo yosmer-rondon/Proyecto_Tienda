@@ -94,27 +94,32 @@ namespace Proyecto_Tienda__Diars_
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int idCliente = logCliente.Instancia.BuscarIdClientePorDNI(Convert.ToInt32(txtdnicliente.Text.Trim()));
-            int idEmpleado = logEmpleado.Instancia.BuscarIdempleadoPorDNI(Convert.ToInt32(txtdniempleado.Text.Trim()));
-            if (idCliente > 0)
-            {
-                // Lógica para crear una nueva venta
-                entVenta venta = new entVenta
-                {
-                    fecha = DateTime.Now,
-                    id_cliente = idCliente,
-                    id_empleado = idEmpleado,
-                    estado = true
-                };
+            int dni = Convert.ToInt32(txtdniempleado.Text.Trim());
+            if (!logCliente.Instancia.VerificarClientePorDNI(dni)) {
 
-                int idVenta = logVenta.Instancia.InsertarVenta(venta);
-                txtventa.Text = idVenta.ToString();
-                MessageBox.Show("Venta registrada correctamente.");
+                int idCliente = logCliente.Instancia.BuscarIdClientePorDNI(Convert.ToInt32(txtdnicliente.Text.Trim()));
+                int idEmpleado = logEmpleado.Instancia.BuscarIdempleadoPorDNI(Convert.ToInt32(txtdniempleado.Text.Trim()));
+                if (idCliente > 0)
+                {
+                    // Lógica para crear una nueva venta
+                    entVenta venta = new entVenta
+                    {
+                        fecha = DateTime.Now,
+                        id_cliente = idCliente,
+                        id_empleado = idEmpleado,
+                        estado = false
+                    };
+
+                    int idVenta = logVenta.Instancia.InsertarVenta(venta);
+                    txtventa.Text = idVenta.ToString();
+                    MessageBox.Show("Venta registrada correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el cliente para registrar la venta.");
+                }
             }
-            else
-            {
-                MessageBox.Show("No se encontró el cliente para registrar la venta.");
-            }
+            else { }
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -198,6 +203,21 @@ namespace Proyecto_Tienda__Diars_
             dgvproducto.Columns["id_categoria"].Visible = false;
             dgvproducto.Columns["id_talla"].Visible = false;
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idVenta = Convert.ToInt32(txtventa.Text.Trim());
+                int idFormaPago = 1; // Suponiendo que tienes un ComboBox con las formas de pago
+
+                logPago.Instancia.RegistrarPagoYActualizarVenta(idVenta, idFormaPago);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

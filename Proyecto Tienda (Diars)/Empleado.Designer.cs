@@ -133,7 +133,7 @@
             // txtvuelto1
             // 
             this.txtvuelto1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtvuelto1.Location = new System.Drawing.Point(179, 612);
+            this.txtvuelto1.Location = new System.Drawing.Point(189, 612);
             this.txtvuelto1.Name = "txtvuelto1";
             this.txtvuelto1.Size = new System.Drawing.Size(132, 29);
             this.txtvuelto1.TabIndex = 49;
@@ -142,7 +142,7 @@
             // 
             this.txt_a.AutoSize = true;
             this.txt_a.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_a.Location = new System.Drawing.Point(14, 619);
+            this.txt_a.Location = new System.Drawing.Point(24, 619);
             this.txt_a.Name = "txt_a";
             this.txt_a.Size = new System.Drawing.Size(63, 22);
             this.txt_a.TabIndex = 48;
@@ -151,7 +151,7 @@
             // txtmontorecibido
             // 
             this.txtmontorecibido.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmontorecibido.Location = new System.Drawing.Point(179, 561);
+            this.txtmontorecibido.Location = new System.Drawing.Point(189, 561);
             this.txtmontorecibido.Name = "txtmontorecibido";
             this.txtmontorecibido.Size = new System.Drawing.Size(132, 29);
             this.txtmontorecibido.TabIndex = 47;
@@ -161,7 +161,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(14, 568);
+            this.label9.Location = new System.Drawing.Point(24, 568);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(141, 22);
             this.label9.TabIndex = 46;
@@ -170,7 +170,7 @@
             // txttotalventa
             // 
             this.txttotalventa.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalventa.Location = new System.Drawing.Point(179, 509);
+            this.txttotalventa.Location = new System.Drawing.Point(189, 509);
             this.txttotalventa.Name = "txttotalventa";
             this.txttotalventa.Size = new System.Drawing.Size(132, 29);
             this.txttotalventa.TabIndex = 45;
@@ -179,7 +179,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(10, 516);
+            this.label10.Location = new System.Drawing.Point(20, 516);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 22);
             this.label10.TabIndex = 44;
@@ -209,12 +209,13 @@
             // 
             this.button7.BackColor = System.Drawing.Color.LimeGreen;
             this.button7.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1228, 502);
+            this.button7.Location = new System.Drawing.Point(27, 660);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(100, 36);
             this.button7.TabIndex = 41;
             this.button7.Text = "💵 pagar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // btnAgregarproducto
             // 
@@ -486,7 +487,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Tomato;
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1122, 502);
+            this.button5.Location = new System.Drawing.Point(147, 660);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 36);
             this.button5.TabIndex = 50;

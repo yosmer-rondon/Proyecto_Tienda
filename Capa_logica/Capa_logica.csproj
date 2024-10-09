@@ -125,6 +125,7 @@
     <Compile Include="logEmpleado.cs" />
     <Compile Include="logLogin.cs" />
     <Compile Include="logMarca.cs" />
+    <Compile Include="logPago.cs" />
     <Compile Include="logProducto.cs" />
     <Compile Include="logTalla.cs" />
     <Compile Include="logTipo_producto.cs" />

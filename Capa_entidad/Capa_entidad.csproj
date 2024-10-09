@@ -124,6 +124,7 @@
     <Compile Include="entDetalleVenta.cs" />
     <Compile Include="entEmpleado.cs" />
     <Compile Include="entMarca.cs" />
+    <Compile Include="entPago.cs" />
     <Compile Include="entProducto.cs" />
     <Compile Include="entTalla.cs" />
     <Compile Include="entTipo_producto.cs" />
