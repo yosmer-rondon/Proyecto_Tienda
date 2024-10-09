@@ -12,10 +12,7 @@ namespace Capa_datos
     public class datCliente
     {
         #region sigleton
-        //Patron Singleton
-        // Variable estática para la instancia
         public static readonly datCliente _instancia = new datCliente();
-        //privado para evitar la instanciación directa
         public static datCliente Instancia
         {
             get
@@ -157,6 +154,65 @@ namespace Capa_datos
                 cmd.Connection.Close();
             }
             return elimina;
+        }
+
+        public Boolean ExisteClientePorDNI(int dni)
+        {
+            SqlCommand cmd = null;
+            Boolean existe = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("sp_VerificarClientePorDNI", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@DNI", dni);
+
+                cn.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                if (count > 0)
+                {
+                    existe = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                    cmd.Connection.Close();
+            }
+            return existe;
+        }
+        public int ObtenerIdClientePorDNI(int dni)
+        {
+            SqlCommand cmd = null;
+            int idCliente = 0;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("SELECT id_Cliente FROM Cliente WHERE DNI = @DNI", cn);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@DNI", dni);
+
+                cn.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    idCliente = Convert.ToInt32(result);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                    cmd.Connection.Close();
+            }
+            return idCliente;
         }
 
     }

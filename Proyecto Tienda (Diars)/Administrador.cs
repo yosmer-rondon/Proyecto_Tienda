@@ -400,14 +400,23 @@ namespace Proyecto_Tienda__Diars_
         {
             try
             {
-                entCliente cliente = new entCliente();
-                cliente.Nombre = txtnombrecliente.Text.Trim();
-                cliente.Apellido = txtapellidoscliente.Text.Trim();
-                cliente.DNI = Convert.ToInt32(txtdnicliente.Text.Trim());
-                cliente.Telefono = Convert.ToInt32(txttelefonocliente.Text.Trim());
-                cliente.Estado = cbtestadocliente.Checked;
-                logCliente.Instancia.InsertarCliente(cliente);
-                //MessageBox.Show("Cliente agregado correctamente.");
+                int dni = Convert.ToInt32(txtdnicliente.Text.Trim());
+                if (!logCliente.Instancia.VerificarClientePorDNI(dni))
+                {
+                    entCliente cliente = new entCliente();
+                    cliente.Nombre = txtnombrecliente.Text.Trim();
+                    cliente.Apellido = txtapellidoscliente.Text.Trim();
+                    cliente.DNI = dni;
+                    cliente.Telefono = Convert.ToInt32(txttelefonocliente.Text.Trim());
+                    cliente.Estado = cbtestadocliente.Checked;
+
+                    logCliente.Instancia.InsertarCliente(cliente);
+                    MessageBox.Show("Cliente agregado correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("El cliente con el DNI especificado ya existe.");
+                }
             }
             catch (Exception ex)
             {
@@ -625,7 +634,6 @@ namespace Proyecto_Tienda__Diars_
                 emp.Apellidos = txtapellidoempleado.Text.Trim();
                 emp.DNI = Convert.ToInt32(txtdniempleado.Text.Trim());
                 emp.Telefono = Convert.ToInt32(txttelefonoempleado.Text.Trim());
-                emp.Correo = txtcorreoempleado.Text.Trim();
                 emp.NombreCargo = txtcargoempleado.Text.Trim();
                 emp.Estado = cbestadoempleado.Checked;
 
@@ -653,7 +661,6 @@ namespace Proyecto_Tienda__Diars_
                 emp.Apellidos = txtapellidoempleado.Text.Trim();
                 emp.DNI = Convert.ToInt32(txtdniempleado.Text.Trim());
                 emp.Telefono = Convert.ToInt32(txttelefonoempleado.Text.Trim());
-                emp.Correo = txtcorreoempleado.Text.Trim();
                 emp.NombreCargo = txtcargoempleado.Text.Trim();
                 emp.Estado = cbestadoempleado.Checked;
 
@@ -710,6 +717,14 @@ namespace Proyecto_Tienda__Diars_
         private void txtdnicliente_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtnombrecliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
             }

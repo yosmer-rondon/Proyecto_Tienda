@@ -30,7 +30,6 @@ namespace Capa_datos
                 cmd.Parameters.AddWithValue("@apellidos", empleado.Apellidos);
                 cmd.Parameters.AddWithValue("@dni", empleado.DNI);
                 cmd.Parameters.AddWithValue("@telefono", empleado.Telefono);
-                cmd.Parameters.AddWithValue("@correo", empleado.Correo);
                 cmd.Parameters.AddWithValue("@nombre_cargo", empleado.NombreCargo);
                 cmd.Parameters.AddWithValue("@estado", empleado.Estado);
 
@@ -67,7 +66,6 @@ namespace Capa_datos
                 cmd.Parameters.AddWithValue("@apellidos", empleado.Apellidos);
                 cmd.Parameters.AddWithValue("@dni", empleado.DNI);
                 cmd.Parameters.AddWithValue("@telefono", empleado.Telefono);
-                cmd.Parameters.AddWithValue("@correo", empleado.Correo);
                 cmd.Parameters.AddWithValue("@nombre_cargo", empleado.NombreCargo);
                 cmd.Parameters.AddWithValue("@estado", empleado.Estado);
 
@@ -139,7 +137,6 @@ namespace Capa_datos
                     emp.Apellidos = dr["Apellidos"].ToString();
                     emp.DNI = Convert.ToInt32(dr["DNI"]);
                     emp.Telefono = Convert.ToInt32(dr["Telefono"]);
-                    emp.Correo = dr["Correo"].ToString();
                     emp.id_Cargo = Convert.ToInt32(dr["id_cargo"]);
                     emp.Estado = Convert.ToBoolean(dr["Estado"]);
                     lista.Add(emp);
@@ -154,6 +151,35 @@ namespace Capa_datos
                 cmd.Connection.Close();
             }
             return lista;
+        }
+        public int ObtenerIdempledoPorDNI(int dni)
+        {
+            SqlCommand cmd = null;
+            int idCliente = 0;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("SELECT ID_Empleado FROM Empleado WHERE Dni = @DNI", cn);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@DNI", dni);
+
+                cn.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    idCliente = Convert.ToInt32(result);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                    cmd.Connection.Close();
+            }
+            return idCliente;
         }
     }
 }

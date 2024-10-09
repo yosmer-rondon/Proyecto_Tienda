@@ -40,6 +40,14 @@ namespace Capa_logica
             datCliente.Instancia.EliminarCliente(mc);
 
         }
+        public Boolean VerificarClientePorDNI(int dni)
+        {
+            return datCliente.Instancia.ExisteClientePorDNI(dni);
+        }
+        public int BuscarIdClientePorDNI(int dni)
+        {
+            return datCliente.Instancia.ObtenerIdClientePorDNI(dni);
+        }
     }
 
 }

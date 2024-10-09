@@ -17,9 +17,9 @@ namespace Capa_entidad
         public int id_talla { get; set; }
         public int id_color { get; set; }
         public int id_categoria { get; set; }
+        public string NombreTalla { get; set; }
         public string NombreTipoProducto { get; set; }
         public string NombreMarca { get; set; }
-        public string NombreTalla { get; set; }
         public string NombreColor { get; set; }
         public string NombreCategoria { get; set; }
     }

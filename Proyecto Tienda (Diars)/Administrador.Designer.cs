@@ -30,6 +30,7 @@
         {
             this.tapcontrol = new System.Windows.Forms.TabControl();
             this.Cliente = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.consultarcliente = new System.Windows.Forms.Button();
             this.txtidcliente = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -307,7 +308,6 @@
             this.button40 = new System.Windows.Forms.Button();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label12 = new System.Windows.Forms.Label();
             this.tapcontrol.SuspendLayout();
             this.Cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
@@ -407,6 +407,14 @@
             this.Cliente.TabIndex = 0;
             this.Cliente.Text = "  Clientes  ";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(34, 298);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 27);
+            this.label12.TabIndex = 62;
+            // 
             // consultarcliente
             // 
             this.consultarcliente.Location = new System.Drawing.Point(400, 94);
@@ -472,6 +480,7 @@
             this.txtnombrecliente.Name = "txtnombrecliente";
             this.txtnombrecliente.Size = new System.Drawing.Size(231, 34);
             this.txtnombrecliente.TabIndex = 52;
+            this.txtnombrecliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombrecliente_KeyPress);
             // 
             // label9
             // 
@@ -3210,14 +3219,6 @@
             this.dataGridView8.ReadOnly = true;
             this.dataGridView8.Size = new System.Drawing.Size(1320, 309);
             this.dataGridView8.TabIndex = 105;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(34, 298);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 27);
-            this.label12.TabIndex = 62;
             // 
             // Administrador
             // 

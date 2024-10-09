@@ -35,5 +35,9 @@ namespace Capa_logica
         {
             return datEmpleado.Instancia.ListarEmpleados();
         }
+        public int BuscarIdempleadoPorDNI(int dni)
+        {
+            return datEmpleado.Instancia.ObtenerIdempledoPorDNI(dni);
+        }
     }
 }

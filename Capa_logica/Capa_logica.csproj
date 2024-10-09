@@ -121,12 +121,14 @@
     <Compile Include="logCategoria.cs" />
     <Compile Include="logCliente.cs" />
     <Compile Include="logColor.cs" />
+    <Compile Include="logDetalleVenta.cs" />
     <Compile Include="logEmpleado.cs" />
     <Compile Include="logLogin.cs" />
     <Compile Include="logMarca.cs" />
     <Compile Include="logProducto.cs" />
     <Compile Include="logTalla.cs" />
     <Compile Include="logTipo_producto.cs" />
+    <Compile Include="logVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

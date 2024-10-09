@@ -86,5 +86,9 @@ namespace Capa_logica
         {
             return datProducto.Instancia.ObtenerNombreCategoria(x);
         }
+        public List<entProducto> BuscarProductoConNombres(string termino)
+        {
+            return datProducto.Instancia.BuscarProductoConNombres(termino);
+        }
     }
 }

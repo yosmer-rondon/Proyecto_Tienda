@@ -274,5 +274,44 @@ namespace Capa_datos
                 return result != null ? result.ToString() : string.Empty;
             }
         }
+        public List<entProducto> BuscarProductoConNombres(string termino)
+        {
+            SqlCommand cmd = null;
+            List<entProducto> lista = new List<entProducto>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("BuscarProductosConNombres", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@termino", termino);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entProducto producto = new entProducto();
+                    producto.id_producto = Convert.ToInt32(dr["id_producto"]);
+                    producto.nombre = dr["NombreProducto"].ToString();
+                    producto.stock = Convert.ToInt32(dr["stock"]);
+                    producto.precio = Convert.ToDouble(dr["precio"]);
+                    producto.NombreTalla = dr["Talla"].ToString();
+                    producto.NombreTipoProducto = dr["TipoProducto"].ToString();
+                    producto.NombreMarca = dr["Marca"].ToString();
+                    producto.NombreColor = dr["Color"].ToString();
+                    producto.NombreCategoria = dr["Categoria"].ToString();
+                    lista.Add(producto);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                    cmd.Connection.Close();
+            }
+            return lista;
+        }
     }
 }
