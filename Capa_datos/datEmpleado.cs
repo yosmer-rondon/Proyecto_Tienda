@@ -181,5 +181,34 @@ namespace Capa_datos
             }
             return idCliente;
         }
+        public Boolean ExisteEmpleadoPorDNI(int dni)
+        {
+            SqlCommand cmd = null;
+            Boolean existe = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("sp_VerificarEmpleadoPorDNI", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@DNI", dni);
+
+                cn.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                if (count > 0)
+                {
+                    existe = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                    cmd.Connection.Close();
+            }
+            return existe;
+        }
     }
 }

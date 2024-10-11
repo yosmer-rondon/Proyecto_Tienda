@@ -39,5 +39,9 @@ namespace Capa_logica
         {
             return datEmpleado.Instancia.ObtenerIdempledoPorDNI(dni);
         }
+        public Boolean VerificarEmpleadoPorDNI(int dni)
+        {
+            return datEmpleado.Instancia.ExisteEmpleadoPorDNI(dni);
+        }
     }
 }

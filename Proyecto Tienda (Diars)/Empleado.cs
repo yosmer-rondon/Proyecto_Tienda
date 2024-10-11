@@ -20,12 +20,47 @@ namespace Proyecto_Tienda__Diars_
         public Empleado()
         {
             InitializeComponent();
+            txtventa.Enabled = false;
+            txtidproducto.Enabled = false;
+            txtprecioproducto.Enabled = false;
+            txtsubtotaldetalle.Enabled = false;
+            txttotalventa.Enabled = false;
+
+
         }
         private void ActualizarDataGridView()
         {
             dbvdetalleventa.DataSource = null;
             dbvdetalleventa.DataSource = listaDetalles;
             dbvdetalleventa.Columns["id_Venta"].Visible = false;
+        }
+        private async void verificarcliente(int dnia)
+        {
+            api apiCliente = new api();
+            try
+            {
+                int dni = dnia;
+                if (!logCliente.Instancia.VerificarClientePorDNI(dni))
+                {
+                    api cli = await apiCliente.ObtenerDatosClienteAsync(Convert.ToString(dni));
+                    entCliente cliente = new entCliente();
+                    cliente.Nombre = cli.Nombre;
+                    cliente.Apellido = $"{cli.Apellidos}";
+                    cliente.DNI = dni;
+                    cliente.Telefono = 0;
+                    cliente.Estado = true;
+                    logCliente.Instancia.InsertarCliente(cliente);
+                    MessageBox.Show("Cliente agregado correctamente.");
+                }
+                else
+                {
+                    MessageBox.Show("El cliente con el DNI especificado ya existe.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void CalcularTotal()
@@ -65,37 +100,18 @@ namespace Proyecto_Tienda__Diars_
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            api apiCliente = new api();
-            try
-            {
-                int dni = Convert.ToInt32(txtdnicliente.Text.Trim());
-                if (!logCliente.Instancia.VerificarClientePorDNI(dni))
-                {
-                    api cli = await apiCliente.ObtenerDatosClienteAsync(txtdnicliente.Text.Trim());
-                    entCliente cliente = new entCliente();
-                    cliente.Nombre = cli.Nombre;
-                    cliente.Apellido = $"{cli.Apellidos}";
-                    cliente.DNI = dni;
-                    cliente.Telefono = 0;
-                    cliente.Estado = true;
-                    logCliente.Instancia.InsertarCliente(cliente);
-                    MessageBox.Show("Cliente agregado correctamente.");
-                }
-                else
-                {
-                    MessageBox.Show("El cliente con el DNI especificado ya existe.");  
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            verificarcliente(Convert.ToInt32(txtdnicliente.Text));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             int dni = Convert.ToInt32(txtdniempleado.Text.Trim());
-            if (!logCliente.Instancia.VerificarClientePorDNI(dni)) {
+            if (!logEmpleado.Instancia.VerificarEmpleadoPorDNI(dni)) {
+                MessageBox.Show("Empleado no existe");
+                txtdniempleado.Text = "";
+            }
+            else
+            {
 
                 int idCliente = logCliente.Instancia.BuscarIdClientePorDNI(Convert.ToInt32(txtdnicliente.Text.Trim()));
                 int idEmpleado = logEmpleado.Instancia.BuscarIdempleadoPorDNI(Convert.ToInt32(txtdniempleado.Text.Trim()));
@@ -118,8 +134,8 @@ namespace Proyecto_Tienda__Diars_
                 {
                     MessageBox.Show("No se encontró el cliente para registrar la venta.");
                 }
+                txtdnicliente.Text = "";
             }
-            else { }
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -210,14 +226,81 @@ namespace Proyecto_Tienda__Diars_
             try
             {
                 int idVenta = Convert.ToInt32(txtventa.Text.Trim());
-                int idFormaPago = 1; // Suponiendo que tienes un ComboBox con las formas de pago
-
+                int idFormaPago = 1;
                 logPago.Instancia.RegistrarPagoYActualizarVenta(idVenta, idFormaPago);
+                txtventa.Text = "";
+                txtidproducto.Text = "";
+                txtprecioproducto.Text = "";
+                txtsubtotaldetalle.Text = "";
+                txttotalventa.Text = "";
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+            
+        }
+
+        private void btnAgregarproducto_Paint(object sender, PaintEventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                Color borderColor = Color.Turquoise;
+                int borderWidth = 3;
+                ControlPaint.DrawBorder(e.Graphics, btn.ClientRectangle,
+                                        borderColor, borderWidth, ButtonBorderStyle.Solid,
+                                        borderColor, borderWidth, ButtonBorderStyle.Solid,
+                                        borderColor, borderWidth, ButtonBorderStyle.Solid,
+                                        borderColor, borderWidth, ButtonBorderStyle.Solid);
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Paint(object sender, PaintEventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                Color borderColor = Color.Turquoise;
+                int borderWidth = 3;
+                ControlPaint.DrawBorder(e.Graphics, btn.ClientRectangle,
+                                        borderColor, borderWidth, ButtonBorderStyle.Solid,
+                                        borderColor, borderWidth, ButtonBorderStyle.Solid,
+                                        borderColor, borderWidth, ButtonBorderStyle.Solid,
+                                        borderColor, borderWidth, ButtonBorderStyle.Solid);
+            }
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            verificarcliente(Convert.ToInt32(txtdniclientep.Text));
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string termino = txtbuscarproductop.Text.Trim();
+            List<entProducto> productos = logProducto.Instancia.BuscarProductoConNombres(termino);
+            dgvproductosp.DataSource = productos;
+            dgvproductosp.Columns["id_tipo_producto"].Visible = false;
+            dgvproductosp.Columns["id_marca"].Visible = false;
+            dgvproductosp.Columns["id_color"].Visible = false;
+            dgvproductosp.Columns["id_categoria"].Visible = false;
+            dgvproductosp.Columns["id_talla"].Visible = false;
+        }
+
+        private void Pago_DrawItem(object sender, DrawItemEventArgs e)
+        {
+
         }
     }
 }
