@@ -31,6 +31,8 @@ namespace Proyecto_Tienda__Diars_
             txtsubtotalp.Enabled = false;
             txttotalventa.Enabled = false;
             txttotalpagarp.Enabled = false;
+            Actualizardetalle();
+            Actualizardetallepedido();
 
 
 
@@ -45,7 +47,7 @@ namespace Proyecto_Tienda__Diars_
         {
             dgvdetallep.DataSource = null;
             dgvdetallep.DataSource = listaDetalleP;
-            dgvdetallep.Columns["IdPedido"].Visible = true;
+            dgvdetallep.Columns["IdPedido"].Visible = false;
         }
         private async void verificarcliente(int dnia)
         {
@@ -252,6 +254,8 @@ namespace Proyecto_Tienda__Diars_
                 txtprecioproducto.Text = "";
                 txtsubtotaldetalle.Text = "";
                 txttotalventa.Text = "";
+                listaDetalles.Clear();
+                Actualizardetalle();
             }
             catch (Exception ex)
             {
@@ -422,6 +426,12 @@ namespace Proyecto_Tienda__Diars_
             {
                 MessageBox.Show("Ocurrió un error inesperado: " + ex.Message);
             }
+        }
+
+        private void btnpagarp_Click(object sender, EventArgs e)
+        {
+            listaDetalleP.Clear();
+            Actualizardetallepedido();
         }
     }
 }

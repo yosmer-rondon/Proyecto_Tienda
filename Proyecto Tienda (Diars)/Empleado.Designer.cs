@@ -686,6 +686,7 @@
             this.btnpagarp.TabIndex = 69;
             this.btnpagarp.Text = "💵 pagar";
             this.btnpagarp.UseVisualStyleBackColor = false;
+            this.btnpagarp.Click += new System.EventHandler(this.btnpagarp_Click);
             // 
             // btnagregarproductop
             // 
