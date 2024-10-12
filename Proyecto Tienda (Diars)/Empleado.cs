@@ -88,16 +88,6 @@ namespace Proyecto_Tienda__Diars_
             double total = listaDetalleP.Sum(detalle => detalle.SubTotal);
             txttotalpagarp.Text = total.ToString("F2");
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            dgvproducto.DataSource = logProducto.Instancia.ListarProducto();
-            dgvproducto.Columns["id_tipo_producto"].Visible = false;
-            dgvproducto.Columns["id_marca"].Visible = false;
-            dgvproducto.Columns["id_color"].Visible = false;
-            dgvproducto.Columns["id_categoria"].Visible = false;
-        }
-
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
