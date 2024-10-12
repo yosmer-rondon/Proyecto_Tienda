@@ -321,6 +321,7 @@
             this.dbvdetalleventa.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dbvdetalleventa.Location = new System.Drawing.Point(3, 21);
             this.dbvdetalleventa.Name = "dbvdetalleventa";
+            this.dbvdetalleventa.ReadOnly = true;
             this.dbvdetalleventa.Size = new System.Drawing.Size(640, 310);
             this.dbvdetalleventa.TabIndex = 10;
             // 
@@ -441,6 +442,7 @@
             this.dgvproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvproducto.Location = new System.Drawing.Point(6, 114);
             this.dgvproducto.Name = "dgvproducto";
+            this.dgvproducto.ReadOnly = true;
             this.dgvproducto.Size = new System.Drawing.Size(638, 213);
             this.dgvproducto.TabIndex = 9;
             this.dgvproducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproducto_CellClick);
@@ -718,6 +720,7 @@
             this.dgvdetallep.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvdetallep.Location = new System.Drawing.Point(3, 21);
             this.dgvdetallep.Name = "dgvdetallep";
+            this.dgvdetallep.ReadOnly = true;
             this.dgvdetallep.Size = new System.Drawing.Size(640, 310);
             this.dgvdetallep.TabIndex = 10;
             this.dgvdetallep.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdetallep_CellClick);
@@ -836,8 +839,9 @@
             // 
             this.dgvproductosp.BackgroundColor = System.Drawing.Color.White;
             this.dgvproductosp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvproductosp.Location = new System.Drawing.Point(8, 121);
+            this.dgvproductosp.Location = new System.Drawing.Point(8, 114);
             this.dgvproductosp.Name = "dgvproductosp";
+            this.dgvproductosp.ReadOnly = true;
             this.dgvproductosp.Size = new System.Drawing.Size(638, 213);
             this.dgvproductosp.TabIndex = 9;
             this.dgvproductosp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproductosp_CellClick);

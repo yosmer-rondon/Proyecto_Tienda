@@ -24,9 +24,14 @@ namespace Proyecto_Tienda__Diars_
             txtventa.Enabled = false;
             txtpedido.Enabled = false;
             txtidproducto.Enabled = false;
+            txtidproductop.Enabled = false;
             txtprecioproducto.Enabled = false;
+            txtprecioproductop.Enabled = false;
             txtsubtotaldetalle.Enabled = false;
+            txtsubtotalp.Enabled = false;
             txttotalventa.Enabled = false;
+            txttotalpagarp.Enabled = false;
+
 
 
         }
@@ -152,7 +157,14 @@ namespace Proyecto_Tienda__Diars_
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            dgvproducto.DataSource = logProducto.Instancia.ListarProducto();
+            string termino = "";
+            List<entProducto> productos = logProducto.Instancia.BuscarProductoConNombres(termino);
+            dgvproducto.DataSource = productos;
+            dgvproducto.Columns["id_tipo_producto"].Visible = false;
+            dgvproducto.Columns["id_marca"].Visible = false;
+            dgvproducto.Columns["id_color"].Visible = false;
+            dgvproducto.Columns["id_categoria"].Visible = false;
+            dgvproducto.Columns["id_talla"].Visible = false;
         }
 
         private void dgvproducto_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -339,7 +351,14 @@ namespace Proyecto_Tienda__Diars_
 
         private void btnmostrarproductosp_Click(object sender, EventArgs e)
         {
-            dgvproductosp.DataSource = logProducto.Instancia.ListarProducto();
+            string termino = "";
+            List<entProducto> productos = logProducto.Instancia.BuscarProductoConNombres(termino);
+            dgvproductosp.DataSource = productos;
+            dgvproductosp.Columns["id_tipo_producto"].Visible = false;
+            dgvproductosp.Columns["id_marca"].Visible = false;
+            dgvproductosp.Columns["id_color"].Visible = false;
+            dgvproductosp.Columns["id_categoria"].Visible = false;
+            dgvproductosp.Columns["id_talla"].Visible = false;
         }
 
         private void dgvdetallep_CellClick(object sender, DataGridViewCellEventArgs e)

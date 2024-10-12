@@ -379,7 +379,7 @@
             // 
             // Cliente
             // 
-            this.Cliente.BackColor = System.Drawing.Color.SkyBlue;
+            this.Cliente.BackColor = System.Drawing.Color.PowderBlue;
             this.Cliente.Controls.Add(this.label12);
             this.Cliente.Controls.Add(this.consultarcliente);
             this.Cliente.Controls.Add(this.txtidcliente);
@@ -575,7 +575,7 @@
             // dgvcliente
             // 
             this.dgvcliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvcliente.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgvcliente.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dgvcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvcliente.Location = new System.Drawing.Point(16, 439);
             this.dgvcliente.Name = "dgvcliente";
@@ -614,7 +614,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.SkyBlue;
+            this.tabPage3.BackColor = System.Drawing.Color.PowderBlue;
             this.tabPage3.Controls.Add(this.txtidproducto);
             this.tabPage3.Controls.Add(this.label31);
             this.tabPage3.Controls.Add(this.cbtipoproducto);
@@ -876,7 +876,7 @@
             // 
             this.dgvproducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvproducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvproducto.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgvproducto.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dgvproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvproducto.Location = new System.Drawing.Point(6, 430);
             this.dgvproducto.Name = "dgvproducto";
@@ -1512,7 +1512,7 @@
             // 
             // Empleados
             // 
-            this.Empleados.BackColor = System.Drawing.Color.SkyBlue;
+            this.Empleados.BackColor = System.Drawing.Color.PowderBlue;
             this.Empleados.Controls.Add(this.txtidempleado);
             this.Empleados.Controls.Add(this.label49);
             this.Empleados.Controls.Add(this.btnmodifiarempleado);
@@ -1731,7 +1731,7 @@
             // dgvempleados
             // 
             this.dgvempleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvempleados.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dgvempleados.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dgvempleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvempleados.Location = new System.Drawing.Point(7, 415);
             this.dgvempleados.Name = "dgvempleados";
@@ -1879,7 +1879,7 @@
             // 
             // Pedido
             // 
-            this.Pedido.BackColor = System.Drawing.Color.SkyBlue;
+            this.Pedido.BackColor = System.Drawing.Color.PowderBlue;
             this.Pedido.Controls.Add(this.checkBox2);
             this.Pedido.Controls.Add(this.dateTimePicker3);
             this.Pedido.Controls.Add(this.label43);
@@ -2031,7 +2031,7 @@
             // dataGridView3
             // 
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(10, 416);
             this.dataGridView3.Name = "dataGridView3";
