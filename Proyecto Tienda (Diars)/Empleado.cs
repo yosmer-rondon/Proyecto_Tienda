@@ -17,10 +17,12 @@ namespace Proyecto_Tienda__Diars_
     public partial class Empleado : Form
     {
         private List<entDetalleVenta> listaDetalles = new List<entDetalleVenta>();
+        private List<entDetallePedido> listaDetalleP = new List<entDetallePedido>();
         public Empleado()
         {
             InitializeComponent();
             txtventa.Enabled = false;
+            txtpedido.Enabled = false;
             txtidproducto.Enabled = false;
             txtprecioproducto.Enabled = false;
             txtsubtotaldetalle.Enabled = false;
@@ -28,11 +30,17 @@ namespace Proyecto_Tienda__Diars_
 
 
         }
-        private void ActualizarDataGridView()
+        private void Actualizardetalle()
         {
             dbvdetalleventa.DataSource = null;
             dbvdetalleventa.DataSource = listaDetalles;
             dbvdetalleventa.Columns["id_Venta"].Visible = false;
+        }
+        private void Actualizardetallepedido()
+        {
+            dgvdetallep.DataSource = null;
+            dgvdetallep.DataSource = listaDetalleP;
+            dgvdetallep.Columns["IdPedido"].Visible = true;
         }
         private async void verificarcliente(int dnia)
         {
@@ -67,6 +75,11 @@ namespace Proyecto_Tienda__Diars_
         {
             double total = listaDetalles.Sum(detalle => detalle.Subtotal);
             txttotalventa.Text = total.ToString("F2");
+        }
+        private void CalcularTotalP()
+        {
+            double total = listaDetalleP.Sum(detalle => detalle.SubTotal);
+            txttotalpagarp.Text = total.ToString("F2");
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -117,7 +130,6 @@ namespace Proyecto_Tienda__Diars_
                 int idEmpleado = logEmpleado.Instancia.BuscarIdempleadoPorDNI(Convert.ToInt32(txtdniempleado.Text.Trim()));
                 if (idCliente > 0)
                 {
-                    // Lógica para crear una nueva venta
                     entVenta venta = new entVenta
                     {
                         fecha = DateTime.Now,
@@ -148,7 +160,6 @@ namespace Proyecto_Tienda__Diars_
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvproducto.Rows[e.RowIndex];
-                // Cargar los valores en los TextBox
 
                 txtidproducto.Text = row.Cells["id_producto"].Value.ToString();
                 double precio = Convert.ToDouble(row.Cells["precio"].Value.ToString());
@@ -185,7 +196,7 @@ namespace Proyecto_Tienda__Diars_
 
                 logDetalleVenta.Instancia.InsertarDetalleVenta(detalleVenta);
                 listaDetalles.Add(detalleVenta);
-                ActualizarDataGridView();
+                Actualizardetalle();
                 CalcularTotal();
             }
             catch (Exception ex)
@@ -198,14 +209,10 @@ namespace Proyecto_Tienda__Diars_
         {
             double total = 0;
             double montopagado = 0;
-
-            // Intentar convertir los valores de total y monto pagado solo si los campos no están vacíos
             double.TryParse(txttotalventa.Text.Trim(), out total);
             double.TryParse(txtmontorecibido.Text.Trim(), out montopagado);
-
-            // Calcular el vuelto
             double vuelto = montopagado - total;
-            txtvuelto1.Text = vuelto.ToString("F2"); // 
+            txtvuelto1.Text = vuelto.ToString("F2");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -302,5 +309,101 @@ namespace Proyecto_Tienda__Diars_
         {
 
         }
+
+        private void btnagregarorpedido_Click(object sender, EventArgs e)
+        {
+            int idCliente = logCliente.Instancia.BuscarIdClientePorDNI(Convert.ToInt32(txtdniclientep.Text.Trim()));
+            if (!logCliente.Instancia.VerificarClientePorDNI(idCliente))
+            {
+                MessageBox.Show("CLIENTE NO EXISTE PRESIONE VERIFICAR Y SE AGREGARA AUTOMATICAMENTE");
+            }
+            else {
+                entPedido pedido = new entPedido
+                {
+                    IdCliente = idCliente,
+                    Fecha = DateTime.Now,
+                    FechaEnvio = DateTime.Now.AddDays(2),
+                    FechaEntrega = DateTime.Now.AddDays(5),
+                    Estado = false,
+                    Direccion = txtdireccionp.Text,
+                    Ciudad = txtciudadp.Text,
+                    NumeroSeguimiento = txtnumeroseguimiento.Text,
+                };
+
+                int idpedido = logPedido.Instancia.InsertarPedido(pedido);
+                txtpedido.Text = idpedido.ToString();
+                MessageBox.Show("Orden de pedido registrada correctamente.");
+
+            }
+        }
+
+        private void btnmostrarproductosp_Click(object sender, EventArgs e)
+        {
+            dgvproductosp.DataSource = logProducto.Instancia.ListarProducto();
+        }
+
+        private void dgvdetallep_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvproductosp_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvproductosp.Rows[e.RowIndex];
+                txtidproductop.Text = row.Cells["id_producto"].Value.ToString();
+                double precio = Convert.ToDouble(row.Cells["precio"].Value.ToString());
+                txtprecioproductop.Text = precio.ToString("F2");
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            double total = 0;
+            double montopagado = 0;
+            double.TryParse(txttotalpagarp.Text.Trim(), out total);
+            double.TryParse(txtmontorecibidop.Text.Trim(), out montopagado);
+            double vuelto = montopagado - total;
+            txtvueltop.Text = vuelto.ToString("F2");
+        }
+
+        private void numproductop_ValueChanged(object sender, EventArgs e)
+        {
+            int cantidad = Convert.ToInt32(numproductop.Value);
+            double precio = Convert.ToDouble(txtprecioproductop.Text);
+            double subtotal = precio * cantidad;
+            txtsubtotalp.Text = subtotal.ToString("F2");
+        }
+
+        private void btnagregarproductop_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idpedido = Convert.ToInt32(txtpedido.Text.Trim());
+                int idProducto = Convert.ToInt32(txtidproductop.Text.Trim());
+                int cantidad = Convert.ToInt32(numproductop.Value);
+                double precioUnitario = Convert.ToDouble(txtprecioproductop.Text.Trim());
+                double subtotal = precioUnitario * cantidad;
+
+                entDetallePedido detalle = new entDetallePedido
+                {
+                    IdPedido = idpedido,
+                    IdProducto = idProducto,
+                    Cantidad = cantidad,
+                    SubTotal = subtotal
+                };
+
+                logDetallePedido.Instancia.InsertarDetallePedido(detalle);
+                listaDetalleP.Add(detalle);
+                Actualizardetallepedido();
+                CalcularTotalP();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + ex.Message);
+            }
+        }
     }
 }
+
