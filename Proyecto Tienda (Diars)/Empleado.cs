@@ -33,7 +33,13 @@ namespace Proyecto_Tienda__Diars_
             txttotalpagarp.Enabled = false;
             Actualizardetalle();
             Actualizardetallepedido();
-
+            List<entProducto> productos = logProducto.Instancia.BuscarProductoConNombres("");
+            dgvproducto.DataSource = productos;
+            dgvproducto.Columns["id_tipo_producto"].Visible = false;
+            dgvproducto.Columns["id_marca"].Visible = false;
+            dgvproducto.Columns["id_color"].Visible = false;
+            dgvproducto.Columns["id_categoria"].Visible = false;
+            dgvproducto.Columns["id_talla"].Visible = false;
 
 
         }
